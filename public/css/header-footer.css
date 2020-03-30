@@ -1,0 +1,59 @@
+
+.main-header {
+	background: red;
+	text-align: center;
+	padding: 10px;
+}
+
+
+.card-header {
+
+	/* background:  rgb(246, 170, 25); */
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+.result-header {
+	background:  rgb(246, 170, 25);
+	text-align: center;
+	padding: 5px;
+
+}
+
+.main-footer {
+	background: black;
+	color: rgb(246, 170, 25);
+	padding: 30px;
+	margin-bottom: 0;
+	margin-top: 70px;
+	text-align: center;
+}
+
+
+.card-footer {
+	padding: 10px;
+	text-align: center;
+}
+
+.result-footer {
+
+	/* background:  rgb(246, 170, 25); */
+	text-align: center;
+	/* padding: 30px; */
+}
+
+
+.countdown {
+	color:rgb(246, 170, 25);
+	
+}
+
+
+.countdown-div {
+	text-align: right;
+	position: absolute;
+	right: 2%;
+	top: 5%;
+	
+}
