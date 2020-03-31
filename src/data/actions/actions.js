@@ -10,8 +10,9 @@ export const reset = () => {
   }; 
 };
 
-export const addPlayerName = () => {
+export const addPlayerName = (valueP) => {
   return {
     type: "ADDPLAYERNAME",
+      playerName: valueP,
 }; 
 };
