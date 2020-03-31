@@ -10,10 +10,16 @@ export const reset = () => {
   }; 
 };
 
+
 export const addPlayerName = (valueP) => {
   return {
-    type: "ADDPLAYERNAME",
+    type: 'ADDPLAYERNAME', 
+    playerName: { 
       playerName: valueP,
+      gamesWon: 0,
+      totalPoints: 0,
+      gamesPlayed: 0
+    },
 }; 
 };
 
@@ -22,3 +28,5 @@ export const removePlayerName = () => {
     type: "DELPLAYERNAME",
 }; 
 };
+
+

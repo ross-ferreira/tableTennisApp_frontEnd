@@ -17,7 +17,7 @@ const CreateGame = ({playersList}) => {
                     <PlayerForm/>
                     <ul>
                         {playersList.map((item, index) => (
-                            <li className="page-item" key={ index }> {item}
+                            <li className="page-item" key={ index }> {item.playerName}
                             </li>
                         ))}
                     </ul>
