@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 
 import PlayerForm from './PlayerForm';
 
-import {addPlayerName} from '../../../data/actions/actions'
+import {addPlayerName,removePlayerName} from '../../../data/actions/actions'
 
 
 const mapStateToProps= (state) => {
@@ -17,6 +17,9 @@ const mapDispatchToProps= (dispatch) => {
         handleFormSubmit:(valueP) => {
             dispatch( addPlayerName(valueP) );
         },
+        handleClick:() => {
+          dispatch( removePlayerName() );
+      },
 
   
     };

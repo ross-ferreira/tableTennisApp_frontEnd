@@ -16,3 +16,9 @@ export const addPlayerName = (valueP) => {
       playerName: valueP,
 }; 
 };
+
+export const removePlayerName = () => {
+  return {
+    type: "DELPLAYERNAME",
+}; 
+};
