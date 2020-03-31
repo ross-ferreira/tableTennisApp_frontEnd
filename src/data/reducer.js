@@ -18,3 +18,12 @@ export default (state, action) => {
         default: return state;
         }
     };
+
+
+// const shuffleArray = arr => arr.sort(() => Math.random() - 0.5);
+
+
+// const shuffleArray2 = arr => arr
+//       .map(a => [Math.random(), a])
+//       .sort((a, b) => a[0] - b[0])
+//       .map(a => a[1]);

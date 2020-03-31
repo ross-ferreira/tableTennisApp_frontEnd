@@ -3,6 +3,7 @@ import PlayerForm from './PlayerForm'
 
 import { Link } from 'react-router-dom';
 import { Form, Col, Button } from 'react-bootstrap';
+import Pairing from "./Pairing";
 
 
 const CreateGame = ({playersList}) => {
@@ -21,6 +22,9 @@ const CreateGame = ({playersList}) => {
                             </li>
                         ))}
                     </ul>
+                </section>
+                <section>
+                    <Pairing/>
                 </section>
             </div>
             {/* <FooterGame /> */}
