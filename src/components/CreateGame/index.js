@@ -3,13 +3,13 @@ import CreateGame from './CreateGame';
 import { addPlayerName,} from '../../data/actions/actions';
 
 
-// const mapStateToProps = (state) => {
+const mapStateToProps = ({playersList}) => {
     
-//     return {
-//         srcImage: state.images[(state.counter -1)].url,
-//         counter: state.counter
-//     }
-// }
+    return {
+        // srcImage: state.images[(state.counter -1)].url,
+        playersList: playersList,
+    }
+}
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
         },
     }
 }
-export default connect(null,mapDispatchToProps)(CreateGame);
+export default connect(mapStateToProps,mapDispatchToProps)(CreateGame);
 
 
 // return {

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Form, Col, Button } from 'react-bootstrap';
 
 
-const CreateGame = () => {
+const CreateGame = ({playersList}) => {
 
 
     return (
@@ -15,6 +15,12 @@ const CreateGame = () => {
             <div className="gallery">
                 <section >
                     <PlayerForm/>
+                    <ul>
+                        {playersList.map((item, index) => (
+                            <li className="page-item" key={ index }> {item}
+                            </li>
+                        ))}
+                    </ul>
                 </section>
             </div>
             {/* <FooterGame /> */}
@@ -23,3 +29,4 @@ const CreateGame = () => {
 }
 
 export default CreateGame;
+
