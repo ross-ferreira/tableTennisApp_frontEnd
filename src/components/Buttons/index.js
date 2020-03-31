@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Buttons from "./Buttons";
-import { increase, reset } from "../../data/actions";
+import { increase, reset } from "../../data/actions/actions";
 
 const mapDispatchToProps = dispatch => {
     return { 

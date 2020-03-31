@@ -10,7 +10,7 @@ class Header extends Component {
         return (
             <>
                 <header className="main-header">
-                    <h1>Cider Pong</h1>
+                    <h1>Prosecco Pong</h1>
                 </header>
             </>
         );
