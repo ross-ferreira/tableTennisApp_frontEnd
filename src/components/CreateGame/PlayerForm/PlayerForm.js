@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const PlayerForm = ({playerName,handleFormSubmit,handleClick,handleShuffleNames}) => {
+const PlayerForm = ({playerName,handleFormSubmitP1,handleFormSubmitP2,handleClick,handleShuffleNames,playerAdd}) => {
 
     const [inputValueP1, setInputValueP1] = useState(playerName);
         
@@ -9,14 +9,18 @@ const PlayerForm = ({playerName,handleFormSubmit,handleClick,handleShuffleNames}
             setInputValueP1(e.currentTarget.value); 
         }
 
-    const handleSubmit= (e) => {
+    const handleSubmitP1= (e) => {
             e.preventDefault();
-            handleFormSubmit(inputValueP1);
+            handleFormSubmitP1(inputValueP1);
+        }
+    const handleSubmitP2= (e) => {
+            e.preventDefault();
+            handleFormSubmitP2(inputValueP1);
         }
 
     return (
         <>
-            <form onSubmit={handleSubmit} >
+            <form onSubmit={playerAdd ? handleSubmitP2:handleSubmitP1} >
                 <div class="form-group">
                     <label for="player1name">Player Name</label>
                     <input onChange={handleInputP1} value={inputValueP1} class="form-control" id="player1name" placeholder="Enter Name"></input>

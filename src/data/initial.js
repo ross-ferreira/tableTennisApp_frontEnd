@@ -5,6 +5,12 @@ const initial = {
     
   playersList:[],
 
+  player2List:[],
+
+  player1List:[],
+
+  pairsList:[],
+
   resultsTable:[],
 
   };
