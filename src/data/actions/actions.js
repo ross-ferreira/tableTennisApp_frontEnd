@@ -16,7 +16,6 @@ export const reset = () => {
   }; 
 };
 
-
 export const addPlayerNameP1 = (valueP) => {
   return {
     type: 'ADDPLAYERNAMEP1', 
