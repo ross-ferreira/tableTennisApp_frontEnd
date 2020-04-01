@@ -21,14 +21,17 @@ const pairList = (state) => ({
         pairsList: state.player1List.map((item,index) => {
             const container = {};
             container.player1= (state.player1List[index].playerName);
+            container.gamesWonP1= (state.player1List[index].gamesWon);
+            container.totalPointsP1= (state.player1List[index].totalPoints);
+            container.gamesPlayedP1= (state.player1List[index].gamesPlayed);
+
             container.player2= (state.player2List[index].playerName);
-  
-  
+            container.gamesWonP2= (state.player2List[index].gamesWon);
+            container.totalPointsP2= (state.player2List[index].totalPoints);
+            container.gamesPlayedP2= (state.player2List[index].gamesPlayed);
+            
       return container;
   })})
-
-
-
 
 export default (state, action) => {
   

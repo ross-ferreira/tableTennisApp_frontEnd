@@ -1,13 +1,11 @@
 import React from "react";
-
 import { Link } from 'react-router-dom';
 import { Form, Col, Button } from 'react-bootstrap';
 
 
 
 const PairingP1 = ({pairsList}) => {
-
-
+    
     return (
         <>
 

@@ -11,7 +11,15 @@ const initial = {
 
   pairsList:[],
 
-  resultsTable:[],
+  winnerR1:[],
+
+  winnerR2:[],
+
+  winnerR3:[],
+
+  pairsListR2:[],
+
+  pairsListR3:[],
 
   };
 

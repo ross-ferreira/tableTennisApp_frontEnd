@@ -6,6 +6,7 @@ import Buttons from "./components/Buttons";
 import Header from "./components/Header";
 import WelcomePage from './components/WelcomePage';
 import CreateGame from './components/CreateGame';
+import Tournamnet from "./components/Tournament";
 
 
 
@@ -21,7 +22,7 @@ const App = () => (
         <CreateGame/>
       </Route>
       <Route exact path="/tournament_page">
-        <WelcomePage/>
+        <Tournamnet/>
       </Route>
       <Route exact path="/player_table">
         <WelcomePage/>
