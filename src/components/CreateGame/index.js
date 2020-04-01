@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CreateGame from './CreateGame';
-import { addPlayerName,} from '../../data/actions/actions';
+import { addPlayerName} from '../../data/actions/actions';
 
 
 const mapStateToProps = ({playersList}) => {
@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch) => {
         
         handleIncrement: () => { 
             dispatch (addPlayerName())            
-            
         },
     }
 }

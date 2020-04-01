@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const PlayerForm = ({playerName,handleFormSubmit,handleClick}) => {
+const PlayerForm = ({playerName,handleFormSubmit,handleClick,handleShuffleNames}) => {
 
     const [inputValueP1, setInputValueP1] = useState(playerName);
         
@@ -24,6 +24,7 @@ const PlayerForm = ({playerName,handleFormSubmit,handleClick}) => {
                 <button type="submit" class="btn btn-success">+</button>
             </form>
             <button onClick={handleClick} type="submit" class="btn btn-danger">-</button>
+            <button onClick={handleShuffleNames} class="btn btn-info">Shuffle Names</button>
         </>
     );
 }

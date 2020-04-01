@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 
 import PlayerForm from './PlayerForm';
 
-import {addPlayerName,removePlayerName} from '../../../data/actions/actions'
+import {addPlayerName,removePlayerName,shufflePlayerName} from '../../../data/actions/actions'
 
 
 const mapStateToProps= (state) => {
@@ -20,6 +20,10 @@ const mapDispatchToProps= (dispatch) => {
         handleClick:() => {
           dispatch( removePlayerName() );
       },
+
+      handleShuffleNames:() => {
+        dispatch( shufflePlayerName());
+    },
 
   
     };

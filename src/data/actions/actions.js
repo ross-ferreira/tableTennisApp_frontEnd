@@ -29,4 +29,9 @@ export const removePlayerName = () => {
 }; 
 };
 
+export const shufflePlayerName = () => {
+  return {
+    type: "SHUFFPLAYERNAME",
+}; 
+};
 
