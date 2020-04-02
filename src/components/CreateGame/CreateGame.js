@@ -26,6 +26,9 @@ const CreateGame = ({playersList}) => {
                 </section>
                 <section>
                 <Pairing/>
+                <Link to="/tournament_page">
+                    <button>Submit Players</button>
+                </Link>
                 </section>
             </div>
             {/* <FooterGame /> */}

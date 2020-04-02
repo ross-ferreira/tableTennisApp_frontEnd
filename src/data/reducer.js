@@ -23,15 +23,18 @@ const pairList = (state) => ({
             container.player1= (state.player1List[index].playerName);
             container.gamesWonP1= (state.player1List[index].gamesWon);
             container.totalPointsP1= (state.player1List[index].totalPoints);
+            container.scoreP1= (state.player1List[index].score);
             container.gamesPlayedP1= (state.player1List[index].gamesPlayed);
 
             container.player2= (state.player2List[index].playerName);
             container.gamesWonP2= (state.player2List[index].gamesWon);
             container.totalPointsP2= (state.player2List[index].totalPoints);
+            container.scoreP2= (state.player2List[index].score);
             container.gamesPlayedP2= (state.player2List[index].gamesPlayed);
-            
+
       return container;
   })})
+  const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
 
 export default (state, action) => {
   
@@ -41,7 +44,9 @@ export default (state, action) => {
         case "SHUFFPLAYERNAME": return pListShuff(state); 
         case "ADDPLAYERNAMEP1": return pListP1(state, action);
         case "ADDPLAYERNAMEP2": return pairList(pListP2(state, action));
-        case "DELPLAYERNAME": return pListDel(state);  
+        case "DELPLAYERNAME": return pListDel(state);
+        case "ADDR1RESULTS": return r1Results(state,action);
+
         case "RESET": return initial;
         default: return state;
         }

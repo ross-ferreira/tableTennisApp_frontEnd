@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { addRound1Results} from '../../../data/actions/actions';
+// import { addPlayerNameP1} from '../../data/actions/actions';
 
 import Round1 from './Round1';
 
@@ -16,9 +16,9 @@ const mapStateToProps = ({pairsList}) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         
-        handleFormSubmit: (valueR1) => { 
-            dispatch (addRound1Results(valueR1))            
-        },
+        // handleIncrement: () => { 
+        //     dispatch (addPlayerNameP1())            
+        // },
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Round1);

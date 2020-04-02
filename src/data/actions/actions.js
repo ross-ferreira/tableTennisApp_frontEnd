@@ -23,6 +23,7 @@ export const addPlayerNameP1 = (valueP) => {
       playerName: valueP,
       gamesWon: 0,
       totalPoints: 0,
+      score:0,
       gamesPlayed: 0
     },
 }; 
@@ -35,6 +36,7 @@ export const addPlayerNameP2 = (valueP) => {
       playerName: valueP,
       gamesWon: 0,
       totalPoints: 0,
+      score:0,
       gamesPlayed: 0
     },
 }; 
@@ -49,6 +51,13 @@ export const removePlayerName = () => {
 export const shufflePlayerName = () => {
   return {
     type: "SHUFFPLAYERNAME",
+}; 
+};
+
+export const addRound1Results = (valueR1) => {
+  return {
+    type: "ADDR1RESULTS",
+      resultsR1: valueR1,
 }; 
 };
 
