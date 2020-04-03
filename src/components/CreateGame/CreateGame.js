@@ -6,8 +6,10 @@ import PlayerForm from './PlayerForm'
 
 import Pairing from "./Pairing";
 
+import NameList from "./NameList";
 
-const CreateGame = ({playersList}) => {
+
+const CreateGame = ({pairsList,player1List,player2List,count}) => {
 
 
     return (
@@ -17,15 +19,12 @@ const CreateGame = ({playersList}) => {
             <div className="gallery">
                 <section >
                     <PlayerForm/>
-                    <ul>
-                        {playersList.map((item, index) => (
-                            <li className="page-item" key={ index }> {item.playerName}
-                            </li>
-                        ))}
-                    </ul>
+                    <div>
+                    {count <9 ? <NameList/>:null }  
+                    </div>
                 </section>
                 <section>
-                <Pairing/>
+                    {count <9 ? null: <Pairing/> }
                 <Link to="/tournament_page">
                     <button>Submit Players</button>
                 </Link>
@@ -39,5 +38,4 @@ const CreateGame = ({playersList}) => {
 export default CreateGame;
 
 
- 
 

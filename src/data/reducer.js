@@ -11,7 +11,9 @@ const pListP1 = (state,{playerName}) => ({ ...state, player1List: state.player1L
 
 const pListP2 = (state,{playerName}) => ({ ...state, player2List: state.player2List.concat(playerName)})
 
-const pListDel = (state) => ({ ...state, playersList: state.playersList.slice(0, -1)})
+const pListDelP1 = (state) => ({ ...state, player1List: state.player1List.slice(1)})
+
+const pListDelP2 = (state) => ({ ...state, player2List: state.player2List.slice(1)})
 
 const shuffle = arr => arr.sort(() => Math.random() - 0.5);
 const pListShuff = (state) => ({ ...state, playersList: shuffle(state.playersList)})
@@ -64,7 +66,8 @@ export default (state, action) => {
         case "SHUFFPLAYERNAME": return pListShuff(state); 
         case "ADDPLAYERNAMEP1": return pListP1(state, action);
         case "ADDPLAYERNAMEP2": return pairList(pListP2(state, action));
-        case "DELPLAYERNAME": return pListDel(state);
+        case "DELPLAYERNAMEP1": return pListDelP1(state);
+        case "DELPLAYERNAMEP2": return pListDelP2(state);
         case "ADDR1RESULTS": return r2Pairing(r1Results(state,action),action);;
         case "ADDR2RESULTS": return r3Pairing(r2Results(state,action),action);;
         case "ADDR3RESULTS": return winnerResult(r3Results(state,action),action);;

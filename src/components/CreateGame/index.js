@@ -1,13 +1,17 @@
 import { connect } from 'react-redux';
 import CreateGame from './CreateGame';
+
 import { addPlayerNameP1} from '../../data/actions/actions';
 
 
-const mapStateToProps = ({playersList}) => {
+const mapStateToProps = ({pairsList,player1List,player2List,count}) => {
     
     return {
         // srcImage: state.images[(state.counter -1)].url,
-        playersList: playersList,
+        pairsList: pairsList,
+        player1List: player1List,
+        player2List: player2List,
+        count:count,
     }
 }
 

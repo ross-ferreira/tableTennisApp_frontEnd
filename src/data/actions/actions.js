@@ -42,11 +42,18 @@ export const addPlayerNameP2 = (valueP) => {
 }; 
 };
 
-export const removePlayerName = () => {
+export const removePlayerNameP1 = () => {
   return {
-    type: "DELPLAYERNAME",
+    type: "DELPLAYERNAMEP1",
 }; 
 };
+
+export const removePlayerNameP2 = () => {
+  return {
+    type: "DELPLAYERNAMEP2",
+}; 
+};
+
 
 export const shufflePlayerName = () => {
   return {

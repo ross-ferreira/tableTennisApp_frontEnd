@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 
 
-const PlayerForm = ({playerName,handleFormSubmitP1,handleFormSubmitP2,handleClick,handleShuffleNames,playerAdd}) => {
+const PlayerForm = ({
+    addName,
+    maxPlayers,
+    minPlayers,
+    playerName,
+    handleFormSubmitP1,
+    handleFormSubmitP2,
+    handleClickP1,
+    handleClickP2,
+    handleShuffleNames,
+    playerAdd}) => {
 
     const [inputValueP1, setInputValueP1] = useState(playerName);
         
@@ -20,16 +30,21 @@ const PlayerForm = ({playerName,handleFormSubmitP1,handleFormSubmitP2,handleClic
 
     return (
         <>
-            <form onSubmit={playerAdd ? handleSubmitP2:handleSubmitP1} >
+            <form onSubmit={((maxPlayers) ? playerAdd ? handleSubmitP2:handleSubmitP1 :null) } >
                 <div class="form-group">
                     <label for="player1name">Player Name</label>
                     <input onChange={handleInputP1} value={inputValueP1} class="form-control" id="player1name" placeholder="Enter Name"></input>
                 </div>
                 <button type="submit" class="btn btn-success">+</button>
             </form>
-            <button onClick={handleClick} type="submit" class="btn btn-danger">-</button>
+            <button onClick={(minPlayers) ? playerAdd ? handleClickP1:handleClickP2 :null } type="submit" class="btn btn-danger">-</button>
             <button onClick={handleShuffleNames} class="btn btn-info">Shuffle Names</button>
         </>
     );
 }
 export default PlayerForm;
+
+// { (maxPlayer) ? null : handleIncrement }
+
+
+// playerAdd ? handleSubmitP2:handleSubmitP1
