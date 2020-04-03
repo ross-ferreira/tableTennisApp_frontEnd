@@ -84,28 +84,6 @@ const combineArrays=() =>{
 
 }
 
-const makeR2=()=>{
-  const arrCom=[];
-  p1Temp.map((item,index)=>{
-    arrCom.push({
-      player1: p1Temp[index].player1,
-      gamesWonP1: p1Temp.gamesWonP1,
-      totalPointsP1: p1Temp.totalPointsP1,
-      scoreP1: p1Temp.scoreP1,
-      gamesPlayedP1:p1Temp.gamesPlayedP1,
-
-      player2: p2Temp[index].player1,
-      gamesWonP2: p2Temp.gamesWonP1,
-      totalPointsP2: p2Temp.totalPointsP1,
-      scoreP2: p2Temp.scoreP1,
-      gamesPlayedP2: p2Temp.gamesPlayedP1,
-    })
-  });
-
-  setInputR2(arrCom)
-};
-
-
   const handleInputChange = (index, event) => {
     const values = [...inputFields];
 
@@ -143,8 +121,8 @@ const makeR2=()=>{
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleFormSubmit(inputFields);
-    console.log("inputFields", inputFields);
+    handleFormSubmit(inputFields,inputR2);
+    // console.log("inputFields", inputFields);
   };
 
   return (
@@ -193,7 +171,7 @@ const makeR2=()=>{
             type="submit"
             onSubmit={handleSubmit}
           >
-            Save
+            Next Round
           </button>
         </div>
         <br />

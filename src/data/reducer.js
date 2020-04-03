@@ -35,6 +35,7 @@ const pairList = (state) => ({
       return container;
   })})
   const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
+  const r2Pairing = (state,{r2Pairs}) => ({ ...state, pairsList2: r2Pairs})
 
   const r1 = state => ({ ...state, r1Status: true});
 
@@ -47,7 +48,7 @@ export default (state, action) => {
         case "ADDPLAYERNAMEP1": return pListP1(state, action);
         case "ADDPLAYERNAMEP2": return pairList(pListP2(state, action));
         case "DELPLAYERNAME": return pListDel(state);
-        case "ADDR1RESULTS": return r1Results(state,action);
+        case "ADDR1RESULTS": return r2Pairing(r1Results(state,action),action);;
         case "R1CAPTURESTATE": return r1(state);
 
         case "RESET": return initial;

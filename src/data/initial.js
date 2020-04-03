@@ -19,34 +19,7 @@ const initial = {
 
   winnerR3:[],
 
-  pairsListR2:[
-    // {
-    //   player1: "",
-    //   gamesWonP1: 0,
-    //   totalPointsP1: 0,
-    //   scoreP1: 0,
-    //   gamesPlayedP1:0,
-
-    //   player2: "",
-    //   gamesWonP2: 0,
-    //   totalPointsP2: 0,
-    //   scoreP2: 0,
-    //   gamesPlayedP2:0
-    // },
-    // {
-    //   player1: "",
-    //   gamesWonP1: 0,
-    //   totalPointsP1: 0,
-    //   scoreP1: 0,
-    //   gamesPlayedP1:0,
-
-    //   player2: "",
-    //   gamesWonP2: 0,
-    //   totalPointsP2: 0,
-    //   scoreP2: 0,
-    //   gamesPlayedP2:0
-    // },
-  ],
+  pairsListR2:[],
 
   pairsListR3:[],
 

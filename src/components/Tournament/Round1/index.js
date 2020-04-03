@@ -17,10 +17,11 @@ const mapStateToProps = ({pairsList,r1Status}) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         
-        handleFormSubmit: (valueR1) => { 
-            dispatch (addRound1Results(valueR1))            
+        handleFormSubmit: (valueR1,r2Pairs) => { 
+            dispatch (addRound1Results(valueR1,r2Pairs));            
         },
 
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Round1);
+

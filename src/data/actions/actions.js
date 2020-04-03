@@ -54,10 +54,11 @@ export const shufflePlayerName = () => {
 }; 
 };
 
-export const addRound1Results = (valueR1) => {
+export const addRound1Results = (valueR1,r2Pairs) => {
   return {
     type: "ADDR1RESULTS",
       resultsR1: valueR1,
+      r2Pairs: r2Pairs,
 }; 
 };
 
