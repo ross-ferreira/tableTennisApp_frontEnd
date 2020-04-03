@@ -20,7 +20,7 @@ const combineArrays=() =>{
   const arr= [];
   const arrP2=[];
   inputFieldsR2.map((item,index)=>{
-    if (item.gamesWonP1 > item.gamesWonP2 && (p1Temp.length) < 1) {
+    if (item.gamesWonP1 > item.gamesWonP2 && (arr.length) < 1) {
       arr.push({
         player1: item.player1,
         gamesWonP1: item.gamesWonP1,
@@ -28,7 +28,7 @@ const combineArrays=() =>{
         scoreP1: item.scoreP1,
         gamesPlayedP1:item.gamesPlayedP1,
       }); console.log("p1")
-    } else if (item.gamesWonP1 > item.gamesWonP2 && (p1Temp.length ) > 1) {
+    } else if (item.gamesWonP1 > item.gamesWonP2 && (arr.length ) > 1) {
       arrP2.push({
         player2: item.player1,
         gamesWonP2: item.gamesWonP1,
@@ -39,7 +39,7 @@ const combineArrays=() =>{
     } else {
     };
 
-    if (item.gamesWonP2 > item.gamesWonP1 && (p1Temp.length) < 1) {
+    if (item.gamesWonP2 > item.gamesWonP1 && (arrP2.length) < 1) {
       arrP2.push({
         player2: item.player2,
         gamesWonP2: item.gamesWonP2,
@@ -47,7 +47,7 @@ const combineArrays=() =>{
         scoreP2: item.scoreP2,
         gamesPlayedP2:item.gamesPlayedP2,
       }); console.log("p1")
-    } else if (item.gamesWonP1 > item.gamesWonP2 && (p1Temp.length ) > 1) {
+    } else if (item.gamesWonP1 > item.gamesWonP2 && (arrP2.length ) > 1) {
       arr.push({
         player1: item.player2,
         gamesWonP1: item.gamesWonP2,
