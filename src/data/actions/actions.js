@@ -62,6 +62,22 @@ export const addRound1Results = (valueR1,r2Pairs) => {
 }; 
 };
 
+export const addRound2Results = (valueR2,r3Pairs) => {
+  return {
+    type: "ADDR2RESULTS",
+      resultsR2: valueR2,
+      r3Pairs: r3Pairs,
+}; 
+};
+
+export const addRound3Results = (valueR3,winner) => {
+  return {
+    type: "ADDR3RESULTS",
+      resultsR3: valueR3,
+      winner: winner,
+}; 
+};
+
 export const captureR1 = () => {
   return {
     type: "R1CAPTURESTATE",

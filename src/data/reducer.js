@@ -35,9 +35,26 @@ const pairList = (state) => ({
       return container;
   })})
   const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
-  const r2Pairing = (state,{r2Pairs}) => ({ ...state, pairsList2: r2Pairs})
+  const r2Pairing = (state,{r2Pairs}) => ({ ...state, pairsListR2: r2Pairs})
+
+  const r2Results = (state,{resultsR2}) => ({ ...state, pairsListR2: resultsR2})
+  const r3Pairing = (state,{r3Pairs}) => ({ ...state, pairsListR3: r3Pairs})
+
+  const r3Results = (state,{resultsR3}) => ({ ...state, pairsList3: resultsR3})
+  const winnerResult = (state,{winner}) => ({ ...state, winnerR3: winner})
 
   const r1 = state => ({ ...state, r1Status: true});
+
+
+
+//   const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
+//   const r2Pairing = (state,{r2Pairs}) => ({ ...state, pairsListR2: r2Pairs})
+
+//   const r2Results = (state,{resultsR2}) => ({ ...state, pairs2List: resultsR2})
+//   const r3Pairing = (state,{r3Pairs}) => ({ ...state, pairsListR3: r3Pairs})
+
+//   const r3Results = (state,{resultsR3}) => ({ ...state, pairsList3: resultsR3})
+//   const winnerResult = (state,{winner}) => ({ ...state, winnerR3: winner})
 
 export default (state, action) => {
   
@@ -49,6 +66,8 @@ export default (state, action) => {
         case "ADDPLAYERNAMEP2": return pairList(pListP2(state, action));
         case "DELPLAYERNAME": return pListDel(state);
         case "ADDR1RESULTS": return r2Pairing(r1Results(state,action),action);;
+        case "ADDR2RESULTS": return r3Pairing(r2Results(state,action),action);;
+        case "ADDR3RESULTS": return winnerResult(r3Results(state,action),action);;
         case "R1CAPTURESTATE": return r1(state);
 
         case "RESET": return initial;
