@@ -5,11 +5,12 @@ import { addRound1Results} from '../../../data/actions/actions';
 import Round1 from './Round1';
 
 
-const mapStateToProps = ({pairsList}) => {
+const mapStateToProps = ({pairsList,r1Status}) => {
     
     return {
         // srcImage: state.images[(state.counter -1)].url,
         pairsList: pairsList,
+        r1Status : r1Status,
     }
 }
 
@@ -19,8 +20,7 @@ const mapDispatchToProps = (dispatch) => {
         handleFormSubmit: (valueR1) => { 
             dispatch (addRound1Results(valueR1))            
         },
+
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Round1);
-
-

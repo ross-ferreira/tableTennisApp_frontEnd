@@ -3,36 +3,116 @@ import { Link } from 'react-router-dom';
 import { Form, Col, Button } from 'react-bootstrap';
 import ReactDOM from "react-dom";
 
-const Round1 = ({pairsList,handleFormSubmit,pairsListR2}) => {
-// player1
-// gamesWonP1
-// totalPointsP1
-// scoreP1
-// gamesPlayedP1
 
-// player2
-// gamesWonP2
-// totalPointsP2
-// scoreP2
-// gamesPlayedP2
+const Round1 = ({ pairsList, handleFormSubmit, pairsListR2, r1Status }) => {
 
-// const handleAddFields = () => {
-//   const values = [...inputFields];
-//   values.push({ firstName: "", lastName: "" });
-//   setInputFields(values);
-// };
+  const [inputFields, setInputFields] = useState(pairsList);
+  
+  //for Round 2
+  const [p1Temp, setp1Temp] = useState([]);
+  const [p2Temp, setp2Temp] = useState([]);
+
+  const [inputR2, setInputR2] = useState(pairsListR2);
 
 
+const combineArrays=() =>{
+  const arr= [];
+  const arrP2=[];
+  inputFields.map((item,index)=>{
+    if (item.gamesWonP1 > item.gamesWonP2 && (p1Temp.length + 1) <= 2) {
+      arr.push({
+        player1: item.player1,
+        gamesWonP1: item.gamesWonP1,
+        totalPointsP1: item.totalPointsP1,
+        scoreP1: item.scoreP1,
+        gamesPlayedP1:item.gamesPlayedP1,
+      }); console.log("p1")
+    } else if (item.gamesWonP1 > item.gamesWonP2 && (p1Temp.length + 1) > 2) {
+      arrP2.push({
+        player2: item.player1,
+        gamesWonP2: item.gamesWonP1,
+        totalPointsP2: item.totalPointsP1,
+        scoreP2: item.scoreP1,
+        gamesPlayedP2: item.gamesPlayedP1,
+      });
+    } else {
+    };
 
-    const [inputFields, setInputFields] = useState(pairsList);
-    const [inputR2, setInputR2] = useState(pairsListR2);
+    if (item.gamesWonP2 > item.gamesWonP1 && (p1Temp.length + 1) <= 2) {
+      arrP2.push({
+        player2: item.player2,
+        gamesWonP2: item.gamesWonP2,
+        totalPointsP2: item.totalPointsP2,
+        scoreP2: item.scoreP2,
+        gamesPlayedP2:item.gamesPlayedP2,
+      }); console.log("p1")
+    } else if (item.gamesWonP1 > item.gamesWonP2 && (p1Temp.length + 1) > 2) {
+      arr.push({
+        player1: item.player2,
+        gamesWonP1: item.gamesWonP2,
+        totalPointsP1: item.totalPointsP2,
+        scoreP1: item.scoreP2,
+        gamesPlayedP1: item.gamesPlayedP2,
+      });
+    } else {
+    };
 
-    const handleInputChange = (index, event) => {
+    })
+  setp1Temp(arr)
+  setp2Temp(arrP2)
+
+  const arrCom=[];
+  arr.map((item,index)=>{
+    arrCom.push({
+      // need to add both values incase player 1 is ina player 2 array visa versa
+      player1: (item.player1),
+      gamesWonP1: item.gamesWonP1,
+      totalPointsP1: item.totalPointsP1,
+      scoreP1: item.scoreP1,
+      gamesPlayedP1:item.gamesPlayedP1,
+
+      player2: arrP2[index].player2,
+      gamesWonP2: arrP2[index].gamesWonP2,
+      totalPointsP2: arrP2[index].totalPointsP2,
+      scoreP2: arrP2[index].scoreP2,
+      gamesPlayedP2: arrP2[index].gamesPlayedP2,
+    });
+
+  });
+
+  setInputR2(arrCom)
+
+}
+
+const makeR2=()=>{
+  const arrCom=[];
+  p1Temp.map((item,index)=>{
+    arrCom.push({
+      player1: p1Temp[index].player1,
+      gamesWonP1: p1Temp.gamesWonP1,
+      totalPointsP1: p1Temp.totalPointsP1,
+      scoreP1: p1Temp.scoreP1,
+      gamesPlayedP1:p1Temp.gamesPlayedP1,
+
+      player2: p2Temp[index].player1,
+      gamesWonP2: p2Temp.gamesWonP1,
+      totalPointsP2: p2Temp.totalPointsP1,
+      scoreP2: p2Temp.scoreP1,
+      gamesPlayedP2: p2Temp.gamesPlayedP1,
+    })
+  });
+
+  setInputR2(arrCom)
+};
+
+
+  const handleInputChange = (index, event) => {
     const values = [...inputFields];
-    const p1Temp = [];
-    const p2Temp = [];
-    const valuesR2 = inputR2;
-//For handling Updating pairsList
+
+    const valuesp1 = [...p1Temp];
+    const valuesp2 = [...p2Temp];
+
+    //For handling Updating pairsList
     if (event.target.name === "player1") {
       values[index].scoreP1 = +(event.target.value);
     } else {
@@ -56,53 +136,8 @@ const Round1 = ({pairsList,handleFormSubmit,pairsListR2}) => {
 
     setInputFields(values);
 
-//For creating Finding Winners and Updating pairsListR2
-
-    //Updating p1Temp
-
-  if (values[index].gamesWonP1 > values[index].gamesWonP2 && p1Temp.length <= 2) {
-    p1Temp.push({ player1: values[index].player1, 
-      gamesWonP1: values[index].gamesWonP1,
-      totalPointsP1:values[index].totalPointsP1,
-      scoreP1:values[index].scoreP1,
-      gamesPlayedP1:values[index].gamesPlayedP1, 
-    });
-  } else {
-    p2Temp.push({ player2: values[index].player1, 
-      gamesWonP2: values[index].gamesWonP1,
-      totalPointsP2:values[index].totalPointsP1,
-      scoreP2:values[index].scoreP1,
-      gamesPlayedP2:values[index].gamesPlayedP1, 
-    });
-  }
-    //Updating p2Temp
-    if (values[index].gamesWonP2 > values[index].gamesWonP1 && p2Temp.length <= 2) {
-      p2Temp.push({ player2: values[index].player2, 
-        gamesWonP2: values[index].gamesWonP2,
-        totalPointsP2:values[index].totalPointsP2,
-        scoreP2:values[index].scoreP2,
-        gamesPlayedP2:values[index].gamesPlayedP2, 
-      });
-    } else {
-      p1Temp.push({ player1: values[index].player2, 
-        gamesWonP1: values[index].gamesWonP2,
-        totalPointsP1:values[index].totalPointsP2,
-        scoreP1:values[index].scoreP2,
-        gamesPlayedP1:values[index].gamesPlayedP2, 
-      });
-    }
-// console.log(JSON.stringify(p1Temp, null, 2))
-// console.log(JSON.stringify(p2Temp, null, 2))
-
-console.log(p1Temp)
-console.log(p2Temp)
-console.log(p1Temp.length)
-
-
-
-
-
-
+    console.log(p1Temp.length)
+    console.log(p1Temp)
 
   };
 
@@ -113,18 +148,18 @@ console.log(p1Temp.length)
   };
 
   return (
-    <>      
-    <h2>Round 1 </h2>
+    <>
+      <h2>Round 1 </h2>
       <form onSubmit={handleSubmit}>
 
-          {pairsList.map((item, index) => (
-            <Fragment key={`${item}~${index}`}>
-              <div className="form-row">
+        {pairsList.map((item, index) => (
+          <Fragment key={`${item}~${index}`}>
+            <div className="form-row">
               <div className="form-group col-sm-6">
-          <label htmlFor="player1">{item.player1}</label>
+                <label htmlFor="player1">{item.player1}</label>
                 <input
                   type="number"
-                  min="1" 
+                  min="1"
                   max="10"
                   className="form-control"
                   id="player1"
@@ -139,19 +174,19 @@ console.log(p1Temp.length)
                 <label htmlFor="player2">{item.player2}</label>
                 <input
                   type="number"
-                  min="1" 
-                  max="10" 
-                  className="form-control" 
+                  min="1"
+                  max="10"
+                  className="form-control"
                   id="player2"
                   name="player2"
                   value={item.scoreP2}
                   onChange={event => handleInputChange(index, event)}
                 />
               </div>
-              </div>
-            </Fragment>
-          ))
-            }
+            </div>
+          </Fragment>
+        ))
+        }
         <div className="submit-button">
           <button
             className="btn btn-primary mr-2"
@@ -161,19 +196,72 @@ console.log(p1Temp.length)
             Save
           </button>
         </div>
-        <br/>
+        <br />
         <pre>
           {JSON.stringify(inputFields, null, 2)}
+          <p>p1temp</p>
+          {JSON.stringify(p1Temp, null, 2)}
+          <p>p2temp</p>
+          {JSON.stringify(p2Temp, null, 2)}
+          <p>Combined Array</p>
+          {JSON.stringify(inputR2, null, 2)}
         </pre>
       </form>
+      <button onClick={() => { combineArrays() }}>Save</button>
+
     </>
   );
 };
 
+// export default SideBySide;
+
 export default Round1;
 
+// const combineArrays=() =>{
+//   const arr= [];
+//   inputFields.map((item,index)=>{
+//     arr.push([{
+//       player1: item.player1 }])
+// })
+//   setInputR2(arr)
+
+// }
 
 
+// const combineArrays = () => ({ 
+//   ...pairsListR2, 
+//       pairsListR2: p1Temp.map((item,index) => {
+//           const container = {};
+//           container.player1= (p1Temp[index].player1);
+//           container.gamesWonP1= (p1Temp[index].gamesWonP1);
+//           container.totalPointsP1= (p1Temp[index].totalPointsP1);
+//           container.scoreP1= (p1Temp[index].scoreP1);
+//           container.gamesPlayedP1= (p1Temp[index].gamesPlayedP1);
+
+//           container.player2= (p2Temp[index].player2);
+//           container.gamesWonP2= (p2Temp[index].gamesWonP2);
+//           container.totalPointsP2= (p2Temp[index].totalPointsP2);
+//           container.scoreP2= (p2Temp[index].scoreP2);
+//           container.gamesPlayedP2= (p2Temp[index].gamesPlayedP2);
+
+//     return container;
+
+
+// })}
+// )
+
+// const updateTemps=()=>{
+//   inputFields.map((item,index)=>{
+
+//    (item.gamesWonP1 > item.gamesWonP2 && p1Temp.length <= 2) ?  
+//      p1Temp.push([{ player1: item.player1, 
+//        gamesWonP1: item.gamesWonP1,
+//        totalPointsP1:item.totalPointsP1,
+//        scoreP1:item.scoreP1,
+//        gamesPlayedP1:item.gamesPlayedP1, 
+//      }]) : console.log("p1 outside")
+//   }) 
+//  }
 
 
 

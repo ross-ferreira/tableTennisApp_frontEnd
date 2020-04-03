@@ -36,6 +36,8 @@ const pairList = (state) => ({
   })})
   const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
 
+  const r1 = state => ({ ...state, r1Status: true});
+
 export default (state, action) => {
   
     switch (action.type) {
@@ -46,6 +48,7 @@ export default (state, action) => {
         case "ADDPLAYERNAMEP2": return pairList(pListP2(state, action));
         case "DELPLAYERNAME": return pListDel(state);
         case "ADDR1RESULTS": return r1Results(state,action);
+        case "R1CAPTURESTATE": return r1(state);
 
         case "RESET": return initial;
         default: return state;

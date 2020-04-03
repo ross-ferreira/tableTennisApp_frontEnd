@@ -6,17 +6,19 @@ import Round1 from "./Round1"
 
 
 
-const Tournamnet = ({playersList}) => {
+const Tournamnet = ({playersList,handleClick}) => {
 
 
     return (
         <>
             {/* <HeaderGame /> */}
             <h2>Tournamnet Tracker</h2>
+            
             <div className="gallery">
                 <section >
                     <Round1/>
                 </section>
+                <button onClick={handleClick}>button</button>
             </div>
             {/* <FooterGame /> */}
         </>

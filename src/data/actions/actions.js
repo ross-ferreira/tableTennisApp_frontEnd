@@ -61,3 +61,9 @@ export const addRound1Results = (valueR1) => {
 }; 
 };
 
+export const captureR1 = () => {
+  return {
+    type: "R1CAPTURESTATE",
+}; 
+};
+

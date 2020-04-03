@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
-import Tournament from './Tournament';
-import { addPlayerNameP1} from '../../data/actions/actions';
+
+
+
+import { captureR1} from '../../data/actions/actions';
+
 import Tournamnet from './Tournament';
 
 
-const mapStateToProps = ({playersList}) => {
+const mapStateToProps = ({playersList,}) => {
     
     return {
         // srcImage: state.images[(state.counter -1)].url,
@@ -14,7 +17,9 @@ const mapStateToProps = ({playersList}) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        
+        handleClick:()=>{
+            dispatch (captureR1())
+        },
         // handleIncrement: () => { 
         //     dispatch (addPlayerNameP1())            
         // },
