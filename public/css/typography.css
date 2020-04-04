@@ -1,24 +1,15 @@
-body {
-    font-family: sans-serif;}
+body,p,label {
+    font-family: 'Ubuntu';
+    font-weight: 'normal';
+}
 
 h2, h3, h4, h5 {
     color: black;
     text-align: center;
-    font-family: 'Anton', sans-serif;
-}
-h1 {
-    color: white;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 'bold';
 }
 
-h1 {
-    font-size: 50px;
-}
-
-.main-title {
-    color: rgb(246, 170, 25);
-}
 
 .progress {
     margin-left: 50px;

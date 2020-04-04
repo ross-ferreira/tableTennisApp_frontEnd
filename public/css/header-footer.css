@@ -1,59 +1,67 @@
 
 .main-header {
-	background: red;
-	text-align: center;
+	background: rgb(229,0,21);
 	padding: 10px;
-}
-
-
-.card-header {
-
-	/* background:  rgb(246, 170, 25); */
 	display: flex;
-	justify-content: space-between;
-	padding: 5px;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+
 }
 
-.result-header {
-	background:  rgb(246, 170, 25);
+.tvLabel{
+	position: relative;
+	width: 200px;
+	height: 150px;
+	margin: 20px 0;
+	background: white;
+	border-radius: 50% / 10%;
+	color: white;
 	text-align: center;
-	padding: 5px;
-
+	align-items: center;
+	text-indent: .1em;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.main-footer {
-	background: black;
-	color: rgb(246, 170, 25);
-	padding: 30px;
-	margin-bottom: 0;
-	margin-top: 70px;
-	text-align: center;
-}
-
-
-.card-footer {
-	padding: 10px;
-	text-align: center;
-}
-
-.result-footer {
-
-	/* background:  rgb(246, 170, 25); */
-	text-align: center;
-	/* padding: 30px; */
-}
-
-
-.countdown {
-	color:rgb(246, 170, 25);
+.tv-label-heading {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:bold;
+	font-size: 20px;
+	display:flow-root;
 	
 }
 
+.container-tv{
+	/* content: "";
+	display: block;
+	clear: both; */
+	align-items: center;
+	text-align:right;
+	text-align: center;
+}
 
-.countdown-div {
+.nav-container{
+	display: flow-root;
+	float:right;
+	padding-left: 20vw;
+}
+
+
+nav{
 	text-align: right;
-	position: absolute;
-	right: 2%;
-	top: 5%;
+	display: 100%;
 	
+
 }
+.navButton {
+	display:inline-block;
+	padding: 0.75vw;
+	background-color: white;
+	border-radius: 2em/3em;
+	margin: 0.5vw;
+}
+/* .container-tv{
+	width:50%;
+} */

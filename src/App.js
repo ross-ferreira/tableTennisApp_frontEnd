@@ -1,20 +1,25 @@
 import React, { Fragment } from "react";
-import { HashRouter as Router, Route, } from "react-router-dom";
+import { HashRouter as Router, Route,Switch } from "react-router-dom";
 
+import FourOhFour from "./components/FourOhFour"
 import Value from "./components/Value"; 
 import Buttons from "./components/Buttons";
 import Header from "./components/Header";
 import WelcomePage from './components/WelcomePage';
 import CreateGame from './components/CreateGame';
 import Tournamnet from "./components/Tournament";
+import Footer from "./components/Footer";
+import Rules from './components/Rules';
 
 
 
 
 const App = () => ( 
   <React.Fragment>
+
     <Header/>
     <Router>
+    <Switch>
       <Route exact path="/">
         <WelcomePage/>
       </Route>
@@ -30,7 +35,14 @@ const App = () => (
       <Route exact path="/league_table">
         <WelcomePage/>
       </Route>
+      <Route exact path="/rules">
+        <Rules/>
+      </Route>
+      <FourOhFour/>
+      </Switch>
     </Router>
+    <Footer/>
+
   </React.Fragment>
 );
 export default App;

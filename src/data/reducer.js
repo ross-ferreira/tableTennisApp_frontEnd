@@ -1,4 +1,5 @@
 import initial from '../data/initial';
+import React, { useState, Fragment } from "react";
 
 
 const counterIncrease = state => ({ ...state, count: state.count + 1 });
@@ -16,7 +17,9 @@ const pListDelP1 = (state) => ({ ...state, player1List: state.player1List.slice(
 const pListDelP2 = (state) => ({ ...state, player2List: state.player2List.slice(1)})
 
 const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-const pListShuff = (state) => ({ ...state, playersList: shuffle(state.playersList)})
+
+const pListShuff = (state) => ({ ...state, player1List: shuffle(state.player1List)})
+
 
 const pairList = (state) => ({ 
     ...state, 
@@ -48,7 +51,6 @@ const pairList = (state) => ({
   const r1 = state => ({ ...state, r1Status: true});
 
 
-
 //   const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
 //   const r2Pairing = (state,{r2Pairs}) => ({ ...state, pairsListR2: r2Pairs})
 
@@ -77,16 +79,6 @@ export default (state, action) => {
         default: return state;
         }
     };
-
-
-// const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-
-
-// const shuffleArray2 = arr => arr
-//       .map(a => [Math.random(), a])
-//       .sort((a, b) => a[0] - b[0])
-//       .map(a => a[1]);
-
 
 
 

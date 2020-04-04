@@ -4,38 +4,45 @@ import { Form, Col, Button } from 'react-bootstrap';
 import ReactDOM from "react-dom";
 
 
-const Round3 = ({ handleFormSubmitR3, r1Status,pairsListR3,}) => {
+const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
 
   //Get Data for Round 2
   const [inputFieldsR3, setInputFieldsR3] = useState(pairsListR3);
-  
+
   //for Round 3
   const [inputWinner, setWinner] = useState([]);
 
+  //FOR WINNER POPUP
+  const [saveState, setSave] = useState(1);
+  const [submitState, setSubmit] = useState(1);
 
-const combineArrays=() =>{
-  const arr= [];
-  inputFieldsR3.map((item,index)=>{
-    if (item.gamesWonP1 > item.gamesWonP2) {
-      arr.push({
-        player1: item.player1,
-        gamesWonP1: item.gamesWonP1,
-        totalPointsP1: item.totalPointsP1,
-        scoreP1: item.scoreP1,
-        gamesPlayedP1:item.gamesPlayedP1,
-      }); console.log("p1")
-    } else {
-      arr.push({
-        player2: item.player1,
-        gamesWonP2: item.gamesWonP1,
-        totalPointsP2: item.totalPointsP1,
-        scoreP2: item.scoreP1,
-        gamesPlayedP2: item.gamesPlayedP1,
-      });
-    }
+
+
+
+  const combineArrays = () => {
+    const arr = [];
+    inputFieldsR3.map((item, index) => {
+      if (item.gamesWonP1 > item.gamesWonP2) {
+        arr.push({
+          player1: item.player1,
+          gamesWonP1: item.gamesWonP1,
+          totalPointsP1: item.totalPointsP1,
+          scoreP1: item.scoreP1,
+          gamesPlayedP1: item.gamesPlayedP1,
+        }); console.log("p1")
+      } else {
+        arr.push({
+          player2: item.player1,
+          gamesWonP2: item.gamesWonP1,
+          totalPointsP2: item.totalPointsP1,
+          scoreP2: item.scoreP1,
+          gamesPlayedP2: item.gamesPlayedP1,
+        });
+      }
     })
     setWinner(arr)
-}
+    setSave(saveState + 1)
+  }
 
   const handleInputChangeR3 = (index, event) => {
     const values = [...pairsListR3];
@@ -68,7 +75,8 @@ const combineArrays=() =>{
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleFormSubmitR3(inputFieldsR3,inputWinner);
+    handleFormSubmitR3(inputFieldsR3, inputWinner);
+    setSubmit(submitState + 1)
     // console.log("inputFields", inputFields);
   };
 
@@ -113,22 +121,32 @@ const combineArrays=() =>{
         ))
         }
         <div className="submit-button">
-          <button
+          {saveState % 2 === 0 ? <button
             className="btn btn-primary mr-2"
             type="submit"
             onSubmit={handleSubmit}
           >
-            Next Round
-          </button>
+            Ive got a Winner Feeling
+          </button> : null}
+
         </div>
         <br />
-        <pre>
+        {/* <pre>
           {JSON.stringify(inputFieldsR3, null, 2)}
           <p>Winner</p>
           {JSON.stringify(inputWinner, null, 2)}
-        </pre>
+        </pre> */}
       </form>
       <button onClick={() => { combineArrays() }}>Save</button>
+      <br />
+      {submitState % 2 === 0 ?
+        (<div className="winner-popup">
+          <p onclick={setSubmit(submitState + 1)}>Xxxxxxxxx</p>
+          <figure>
+            <img />
+          </figure>
+        </div>) : null
+      }
 
     </>
   );

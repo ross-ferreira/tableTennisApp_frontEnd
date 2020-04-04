@@ -15,10 +15,12 @@ import {
 const mapStateToProps= (state) => {
   return { 
     playerName: state.playerName,
-    counter:state.count,
+    noPlayersNeed: (9 - state.count),
     playerAdd: (state.count % 2 ===0),
     maxPlayers: (state.count < 9),
     minPlayers: (state.count >1),
+    count: state.count,
+    pairsList:state.pairsList,
   };
 }
 
@@ -46,7 +48,6 @@ const mapDispatchToProps= (dispatch) => {
         dispatch( shufflePlayerName());
     },
 
-  
     };
   }
 
