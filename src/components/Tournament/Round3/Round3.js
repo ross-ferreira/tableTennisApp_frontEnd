@@ -14,7 +14,7 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
 
   //FOR WINNER POPUP
   const [saveState, setSave] = useState(1);
-  const [submitState, setSubmit] = useState(1);
+  const [subState, setSubmit] = useState(1);
 
 
 
@@ -42,6 +42,7 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
     })
     setWinner(arr)
     setSave(saveState + 1)
+    // setSubmit(subState + 1)
   }
 
   const handleInputChangeR3 = (index, event) => {
@@ -76,7 +77,7 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
   const handleSubmit = e => {
     e.preventDefault();
     handleFormSubmitR3(inputFieldsR3, inputWinner);
-    setSubmit(submitState + 1)
+    
     // console.log("inputFields", inputFields);
   };
 
@@ -137,14 +138,12 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
         </div>
       </form>
       <button class="sav-play-but" onClick={() => { combineArrays() }}>Save</button>
-      <br />
-      {submitState % 2 === 0 ?
-        (<div className="winner-popup">
-          <p onclick={setSubmit(submitState + 1)}>Xxxxxxxxx</p>
-          <figure>
-            <img />
-          </figure>
-        </div>) : null
+      {saveState % 2 === 0 ? (
+      <div className="winner-popup"> 
+      <img src="https://media.giphy.com/media/hogmFYXmaAa8CLWsoy/giphy.gif"/>
+      <h2>Well Done {inputWinner.player1}{inputWinner.player2}</h2>
+      </div>
+      ) : console.log("end of game")
       }
 
     </>
