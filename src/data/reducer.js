@@ -51,15 +51,6 @@ const pairList = (state) => ({
   const r1 = state => ({ ...state, r1Status: true});
 
 
-//   const r1Results = (state,{resultsR1}) => ({ ...state, pairsList: resultsR1})
-//   const r2Pairing = (state,{r2Pairs}) => ({ ...state, pairsListR2: r2Pairs})
-
-//   const r2Results = (state,{resultsR2}) => ({ ...state, pairs2List: resultsR2})
-//   const r3Pairing = (state,{r3Pairs}) => ({ ...state, pairsListR3: r3Pairs})
-
-//   const r3Results = (state,{resultsR3}) => ({ ...state, pairsList3: resultsR3})
-//   const winnerResult = (state,{winner}) => ({ ...state, winnerR3: winner})
-
 export default (state, action) => {
   
     switch (action.type) {
@@ -79,14 +70,4 @@ export default (state, action) => {
         default: return state;
         }
     };
-
-
-
-// const pListShuff = (state,initial) => {
-//     const newplayersList = (...state.playersList,shuffle())
-//     return {
-//         ...initial,
-//         playersList:newplayersList,
-//     }
-// }
 

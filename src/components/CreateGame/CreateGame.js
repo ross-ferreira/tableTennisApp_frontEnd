@@ -10,6 +10,7 @@ import NameList from "./NameList";
 
 
 
+
 const CreateGame = ({pairsList,player1List,player2List,count}) => {
 
     return (

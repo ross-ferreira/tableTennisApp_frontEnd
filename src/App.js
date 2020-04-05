@@ -10,15 +10,16 @@ import CreateGame from './components/CreateGame';
 import Tournamnet from "./components/Tournament";
 import Footer from "./components/Footer";
 import Rules from './components/Rules';
+import history from "../src/history";
 
 
 
 
 const App = () => ( 
   <React.Fragment>
-
+    
+    <Router history={ history }>
     <Header/>
-    <Router>
     <Switch>
       <Route exact path="/">
         <WelcomePage/>

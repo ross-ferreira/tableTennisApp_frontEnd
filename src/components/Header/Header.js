@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { HashRouter as Router, Route,Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // import { Container, Navbar } from 'react-bootstrap';
 
 
 
-class Header extends Component {
+const Header = ({handleReset}) => {
 
-    render() {
 
-        return (
-            <>
-            <Router>
+    return (
+        <>
                 <header className="main-header">
                     <div class="container-tv">
                         <div class="tvLabel">
@@ -21,17 +19,17 @@ class Header extends Component {
                     </div>
                     <div class="nav-container">
                         <nav>
-                            <Link>
-                                <button class="navButton">
+                            <Link to="/"  onClick={handleReset}>
+                                <button class="navButton" >
                                     NEW GAME
                                 </button>
                             </Link>
-                            <Link exact path="/tournament_page">
+                            <Link to="/tournament_page">
                                 <button class="navButton">
                                     CURRENT GAME
                                 </button>
                             </Link>
-                            <Link exact path="/rules">
+                            <Link to="/rules">
                                 <button class="navButton">
                                     THE RULES
                                 </button>
@@ -39,9 +37,8 @@ class Header extends Component {
                         </nav>
                     </div>
                 </header>
-                </Router>
-            </>
-        );
-    }
+        </>
+    );
 }
+
 export default Header;
