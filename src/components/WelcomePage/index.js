@@ -11,16 +11,16 @@ const WelcomePage = () => {
                 <img src="../../../images/beerCup.jpg"/>
             </figure>
             <div class="welcome-image-r">
-                <img src="../../../images/pingpongking.jpg"/>
+                <img src="../../../images/pingpongking.jpg" className="pong-king"/>
                 <p class="title-welcome-card">
-                    The Worlds First Prosecco Tournament App
+                    You have Made it!
                 </p>
 
                 <p>
                     Firstly, add all players for an 8 player match
                 </p>
                 <p>
-                    Then input the Scores for each Round
+                    Then input the Scores for each Round (Max:10)
                 </p>
                 <p>
                     Then Boom! You will be able to crown a Prosecco King or Queen

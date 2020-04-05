@@ -39,7 +39,7 @@
 	border-radius: 50% / 10%;
 	transform: skew(0deg, -6deg);
 	border: 10px inset orange;
-	box-shadow: 55px 35px 75px 20px #C9981F;
+	box-shadow: 55px 25px 50px 20px #C9981F;
 }
 
 .tv-label-heading1 {
@@ -102,6 +102,9 @@
 
 .footer-text{
 	color: #555555;
+	text-align: center;
+	background: rgb(229,0,21);
+	padding: 40px;
 }
 
 

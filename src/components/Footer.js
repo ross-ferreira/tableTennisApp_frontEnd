@@ -9,7 +9,7 @@ class Footer extends Component {
 
         return (
             <>
-                <footer className="main-header">
+                <footer className="main-footer">
                 <p class="footer-text">Designed by Ross Ferreira &copy; 2020</p>
                 </footer>
             </>
