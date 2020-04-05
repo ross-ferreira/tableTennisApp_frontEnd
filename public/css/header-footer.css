@@ -1,67 +1,108 @@
-
+/* Positioning */
 .main-header {
 	background: rgb(229,0,21);
 	padding: 10px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content:center;
+	display:flex;
+	flex-direction: row;
 	align-items: center;
-
+	justify-content: space-between;
 }
-
-.tvLabel{
-	position: relative;
-	width: 200px;
-	height: 150px;
-	margin: 20px 0;
-	background: white;
-	border-radius: 50% / 10%;
-	color: white;
-	text-align: center;
-	align-items: center;
-	text-indent: .1em;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.tv-label-heading {
-    color: black;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight:bold;
-	font-size: 20px;
-	display:flow-root;
-	
-}
-
 .container-tv{
-	/* content: "";
-	display: block;
-	clear: both; */
-	align-items: center;
-	text-align:right;
-	text-align: center;
+	flex-grow: 1;
+	
 }
 
 .nav-container{
-	display: flow-root;
-	float:right;
-	padding-left: 20vw;
+	flex-grow: 1;
 }
 
-
-nav{
-	text-align: right;
-	display: 100%;
+.tvLabel{
+	float: left;
 	
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* STYLES */
+.main-header {
+	background: rgb(229,0,21);
+	padding: 30px 10px 40px 10px;
+}
+.tvLabel{
+	width: 35vw;
+	height: 30vh;
+	margin: 20px 0;
+	background-image: url(" http://api.thumbr.it/whitenoise-361x370.png?background=#ECECECff&noise=626262&density=28&opacity=7");
+	border-radius: 50% / 10%;
+	transform: skew(0deg, -6deg);
+	border: 10px inset orange;
+	box-shadow: 55px 35px 75px 20px #C9981F;
+}
+
+.tv-label-heading1 {
+	color: #555555;
+    font-family: 'Montez', cursive;
+    font-weight:bold;
+	font-size: 6.5vw;
+	padding: 25px 0px 10px 0px;
 
 }
-.navButton {
-	display:inline-block;
-	padding: 0.75vw;
-	background-color: white;
-	border-radius: 2em/3em;
-	margin: 0.5vw;
+.tv-label-heading2 {
+    color: black;
+    font-family:'Graduate', cursive;
+    font-weight:bold;
+	font-size: 2vw;
+
 }
-/* .container-tv{
-	width:50%;
+
+.navButton{
+    color: #555555;
+    text-transform: uppercase;
+    background: rgb(229,0,21);
+    padding: 20px;
+    margin:5% ;
+    border: 4px solid #555555;
+    border-radius: 6px;
+    display: inline-block;
+	transition: all 0.3s ease 0s;
+	font-family:'Graduate', cursive;
+	font-weight:bold;
+	font-size: 1.15vw;
+    }
+
+.navButton:hover {
+        color: orange;
+		border-radius: 50px;
+		border-color:inset orange;
+		background-image: url(" http://api.thumbr.it/whitenoise-361x370.png?background=#ECECECff&noise=626262&density=28&opacity=7");
+        transition: all 0.3s ease 0s;
+		}
+		
+
+/* .navButton {
+	display:inline-block;
+	padding: 3.5% 0.5% 0.25% 0.25%;
+	width: 13vw;
+	height: 10vh;
+	background-image: url(" http://api.thumbr.it/whitenoise-361x370.png?background=#ECECECff&noise=626262&density=28&opacity=7");
+	border: 5px inset orange;
+	text-align: center;
+	vertical-align: sub;
+    color: #555555;
+	font-family:'Graduate', cursive;
+	font-weight:bold;
+	font-size: 1.15vw;
+	margin: 25px;
+	border-radius: 50% / 17.50%;
+	transform: skew(0deg, -6deg);
 } */
+
+.footer-text{
+	color: #555555;
+}
+
+
+	

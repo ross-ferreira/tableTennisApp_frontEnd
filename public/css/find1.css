@@ -1,5 +1,15 @@
 
-.title {
+
+
+
+
+
+
+
+
+
+
+/* .title {
 color: rgb(51, 81, 87);
 font-weight: bold;
 }
@@ -55,16 +65,16 @@ background-color: bisque;
 .footer-div {
 text-align: center;
 /* padding: 10px; */
-background-color: black;
+/* background-color: black;
 }
 
 .instructions-section {
 text-align: center;
 padding: 40px;
 
-}
+} */
 
-.list{
+/* .list{
 list-style-type: none;
 }
 
@@ -98,4 +108,4 @@ position: absolute;
 
 .finish-img {
 border-radius: 10%;
-}
+} */

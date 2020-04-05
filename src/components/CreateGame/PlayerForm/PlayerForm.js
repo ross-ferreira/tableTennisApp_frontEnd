@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 import NameList from "../NameList"
 
@@ -42,16 +43,21 @@ const PlayerForm = ({
     return (
         <>
             <form onSubmit={((maxPlayers) ? playerAdd ? handleSubmitP2:handleSubmitP1 :null) } >
-                <div class="form-group">
+                <div class="form-group-add">
                     <label for="player1name">Player Name (Enter 8 Players)</label>
                     <input onChange={handleInputP1} value={inputValueP1} class="form-control" id="player1name" placeholder="Enter Name"></input>
                     {maxPlayers?<p>Just Players {noPlayersNeed } Remaining</p>:<p>Good Job Buddy!!</p>}
                 </div>
-                <button type="submit" class="btn btn-success" onClick={shuffleState? handleShuffleNames:null} >+</button>
+                <div class="add-play-but" >
+                    <button type="submit" onClick={shuffleState? handleShuffleNames:null} >+</button>
+                </div>            
             </form>
-            <button onClick={(minPlayers) ? playerAdd ? handleClickP1:handleClickP2 :null }  type="submit" class="btn btn-danger">-</button>
-            {/* <button onClick={handleShuffleNames}  class="btn btn-info">Shuffle Names</button> */}
-            <button onClick={handleClick}> {shuffleState ? 'ON' : 'OFF'} </button>
+
+            <button class="rem-play-but" onClick={(minPlayers) ? playerAdd ? handleClickP1:handleClickP2 :null }  type="submit" >-</button>
+            <button class="shuf-play-but" onClick={handleClick}> {shuffleState ? 'ON' : 'OFF'} </button>
+            <Link to="/tournament_page">
+                    <button class="submit-play-but">Submit Players</button>
+            </Link>
         </>
     );
 }

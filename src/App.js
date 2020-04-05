@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { HashRouter as Router, Route,Switch } from "react-router-dom";
 
 import FourOhFour from "./components/FourOhFour"
-import Value from "./components/Value"; 
+import Value from "./components/old/Value"; 
 import Buttons from "./components/Buttons";
 import Header from "./components/Header";
 import WelcomePage from './components/WelcomePage';

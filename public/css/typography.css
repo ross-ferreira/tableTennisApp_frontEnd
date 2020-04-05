@@ -11,35 +11,4 @@ h2, h3, h4, h5 {
 }
 
 
-.progress {
-    margin-left: 50px;
-}
-
-.counter {
-    margin-right: 50px;
-}
-
-.result-text {
-
-    color: rgb(51, 81, 87);
-    font-weight: bold;
-    padding: 25px;
-}
-
-a {
-    cursor: default;
-}
-
-footer {
-    font-size: small;
-}
-
-.red {
-    color: red;
-}
-
-.red {
-    color: rgb(246, 170, 25);
-}
-
 

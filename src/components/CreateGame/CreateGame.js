@@ -18,17 +18,14 @@ const CreateGame = ({pairsList,player1List,player2List,count}) => {
             {/* <HeaderGame /> */}
             <h2>Create New Tournamnet</h2>
             <div className="gallery">
-                <section >
-                    <PlayerForm/>
-                    <div>
+                <section class="player-form">
+                <PlayerForm/>
+                <div>
                     {count <9 ? <NameList/>:null }  
-                    </div>
+                </div>
                 </section>
                 <section>
                     {count <9 ? null: <Pairing/> }
-                <Link to="/tournament_page">
-                    <button>Submit Players</button>
-                </Link>
                 </section>
             </div>
             {/* <FooterGame /> */}
