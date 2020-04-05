@@ -10,7 +10,7 @@ const PairingP1 = ({pairsList}) => {
         <>
 
             <div className="gallery">
-                <table class="table">
+                <table class="table table-dark">
                     <thead>
                     <tr>
                         <th scope="col">Group</th>

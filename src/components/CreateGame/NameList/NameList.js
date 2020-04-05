@@ -9,37 +9,24 @@ const NameList = ({pairsList,player1List,player2List}) => {
 
     return (
         <>
-
-                <section >
+                <section class="cup" >
                     <div>
-                        <table class="table">
-                            <thead>
-                            </thead>
-                            <tbody>
-                                {player1List.map((item,index,array) => (
-                                    <tr>
-                                        <td>
-                                        {item.playerName}
-                                        </td>
-                                    </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <thead>
-                            </thead>
-                            <tbody>
-                                {player2List.map((item,index,array) => (
-                                    <tr>
-                                        <td>
-                                        {item.playerName}
-                                        </td>
-                                    </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </table>
+                        <div>
+                            {player1List.map((item,index,array) => (
+                                <div class="fluid">
+                                    {item.playerName}
+                                </div>
+                                ))
+                            }
+                        </div>
+                        <div>
+                            {player2List.map((item,index,array) => (
+                                <div class="fluid">
+                                    {item.playerName}
+                                </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </section>
                 </>
@@ -48,3 +35,4 @@ const NameList = ({pairsList,player1List,player2List}) => {
 }
 
 export default NameList;
+

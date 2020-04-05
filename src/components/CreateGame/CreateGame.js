@@ -12,23 +12,22 @@ import NameList from "./NameList";
 
 const CreateGame = ({pairsList,player1List,player2List,count}) => {
 
-
     return (
         <>
-            {/* <HeaderGame /> */}
             <h2>Create New Tournamnet</h2>
-            <div className="gallery">
-                <section class="player-form">
-                <PlayerForm/>
-                <div>
-                    {count <9 ? <NameList/>:null }  
+            <div className="player-entry">
+                <div class="player-form">
+                    <PlayerForm/>
                 </div>
-                </section>
-                <section>
+                <div class="player-list">
+                    <div> 
+                        {count <9 ? <NameList/>:null } 
+                    </div>
+                </div>
+                <div class="player-pairing">
                     {count <9 ? null: <Pairing/> }
-                </section>
+                </div>
             </div>
-            {/* <FooterGame /> */}
         </>
     );
 }

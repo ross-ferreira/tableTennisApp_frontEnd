@@ -1,7 +1,13 @@
 /*Atoms*/
 @import 'typography.css';
 @import 'buttons.css';
+@import 'glowing-button.css';
+@import 'toggle-button.css';
+
 
 /*Organism*/
 @import 'header-footer.css';
-@import 'card.css';
+@import 'welcome-page.css';
+
+
+@import 'create-game.css';

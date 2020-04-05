@@ -61,18 +61,16 @@
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
+    font-family: 'Ubuntu', sans-serif;
     }
 
 .enter-button:hover {
         color: #555555;
         border-radius: 50px;
-        border-color: #555555;
+        border-color:greenyellow;
         transition: all 0.3s ease 0s;
+        
         }
-
-
-
-
 
         /* .enter-button {
 

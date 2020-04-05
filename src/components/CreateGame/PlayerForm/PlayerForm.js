@@ -42,22 +42,25 @@ const PlayerForm = ({
 
     return (
         <>
-            <form onSubmit={((maxPlayers) ? playerAdd ? handleSubmitP2:handleSubmitP1 :null) } >
+        <div class="player-form-cont">
+            <form class="player-form" onSubmit={((maxPlayers) ? playerAdd ? handleSubmitP2:handleSubmitP1 :null) } >
                 <div class="form-group-add">
                     <label for="player1name">Player Name (Enter 8 Players)</label>
                     <input onChange={handleInputP1} value={inputValueP1} class="form-control" id="player1name" placeholder="Enter Name"></input>
                     {maxPlayers?<p>Just Players {noPlayersNeed } Remaining</p>:<p>Good Job Buddy!!</p>}
                 </div>
-                <div class="add-play-but" >
-                    <button type="submit" onClick={shuffleState? handleShuffleNames:null} >+</button>
+                <div class="add-play-div" >
+                    <button class="add-play-but" type="submit" onClick={shuffleState? handleShuffleNames:null} > + </button>
                 </div>            
             </form>
-
-            <button class="rem-play-but" onClick={(minPlayers) ? playerAdd ? handleClickP1:handleClickP2 :null }  type="submit" >-</button>
-            <button class="shuf-play-but" onClick={handleClick}> {shuffleState ? 'ON' : 'OFF'} </button>
-            <Link to="/tournament_page">
-                    <button class="submit-play-but">Submit Players</button>
-            </Link>
+            <div class="control-panel">
+                <button class="rem-play-but" onClick={(minPlayers) ? playerAdd ? handleClickP1:handleClickP2 :null }  type="submit" > - </button>
+                <button class="shuf-play-but" onClick={handleClick}> {shuffleState ? 'SHUFFLE ON' : 'SHUFFLE OFF'} </button>
+                <Link to="/tournament_page">
+                    <button class="submit-play-but">SUBMIT PLAYERS</button>
+                </Link>
+            </div>
+        </div>
         </>
     );
 }
