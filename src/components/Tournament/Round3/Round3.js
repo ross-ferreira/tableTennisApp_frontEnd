@@ -84,60 +84,59 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
     <>
       <h2>Round 3 </h2>
       <form onSubmit={handleSubmit}>
+        <div className="round1-cont">
+          {pairsListR3.map((item, index) => (
+            <Fragment key={`${item}~${index}`}>
+              <div className="form-row-rounds">
+                <div className="form-group col-sm-6">
+                  <label htmlFor="player1">Player 1:{item.player1}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    className="form-control"
+                    id="player1"
+                    name="player1"
+                    value={item.scoreP1}
+                    onChange={event => handleInputChangeR3(index, event)}
+                  />
+                </div>
 
-        {pairsListR3.map((item, index) => (
-          <Fragment key={`${item}~${index}`}>
-            <div className="form-row">
-              <div className="form-group col-sm-6">
-                <label htmlFor="player1">{item.player1}</label>
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  className="form-control"
-                  id="player1"
-                  name="player1"
-                  value={item.scoreP1}
-                  onChange={event => handleInputChangeR3(index, event)}
-                />
+
+                <div className="form-group col-sm-4">
+                  <label htmlFor="player2">Player 2:{item.player2}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    className="form-control"
+                    id="player2"
+                    name="player2"
+                    value={item.scoreP2}
+                    onChange={event => handleInputChangeR3(index, event)}
+                  />
+                </div>
               </div>
-
-
-              <div className="form-group col-sm-4">
-                <label htmlFor="player2">{item.player2}</label>
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  className="form-control"
-                  id="player2"
-                  name="player2"
-                  value={item.scoreP2}
-                  onChange={event => handleInputChangeR3(index, event)}
-                />
-              </div>
-            </div>
-          </Fragment>
-        ))
-        }
-        <div className="submit-button">
-          {saveState % 2 === 0 ? <button
-            className="btn btn-primary mr-2"
-            type="submit"
-            onSubmit={handleSubmit}
-          >
-            Ive got a Winner Feeling
+            </Fragment>
+          ))
+          }
+          <div className="submit-button">
+            {saveState % 2 === 0 ? <button
+              className="submit-play-but"
+              type="submit"
+              onSubmit={handleSubmit}
+            >
+              Ive got a Winner Feeling
           </button> : null}
-
-        </div>
-        <br />
-        {/* <pre>
+          </div>
+          {/* <pre>
           {JSON.stringify(inputFieldsR3, null, 2)}
           <p>Winner</p>
           {JSON.stringify(inputWinner, null, 2)}
         </pre> */}
+        </div>
       </form>
-      <button onClick={() => { combineArrays() }}>Save</button>
+      <button class="sav-play-but" onClick={() => { combineArrays() }}>Save</button>
       <br />
       {submitState % 2 === 0 ?
         (<div className="winner-popup">

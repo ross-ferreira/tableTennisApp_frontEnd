@@ -25,7 +25,7 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
     const arr = [];
     const arrP2 = [];
     inputFieldsR2.map((item, index) => {
-      if (item.gamesWonP1 > item.gamesWonP2 && (arr.length) < 1) {
+      if (item.gamesWonP1 > item.gamesWonP2 && (arr.length + 1) <= 1) {
         arr.push({
           player1: item.player1,
           gamesWonP1: item.gamesWonP1,
@@ -33,7 +33,7 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
           scoreP1: item.scoreP1,
           gamesPlayedP1: item.gamesPlayedP1,
         }); console.log("p1")
-      } else if (item.gamesWonP1 > item.gamesWonP2 && (arr.length) > 1) {
+      } else if (item.gamesWonP1 > item.gamesWonP2 && (arr.length + 1) > 1) {
         arrP2.push({
           player2: item.player1,
           gamesWonP2: item.gamesWonP1,
@@ -44,7 +44,7 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
       } else {
       };
 
-      if (item.gamesWonP2 > item.gamesWonP1 && (arrP2.length) < 1) {
+      if (item.gamesWonP2 > item.gamesWonP1 && (arrP2.length + 1) <= 1) {
         arrP2.push({
           player2: item.player2,
           gamesWonP2: item.gamesWonP2,
@@ -52,7 +52,7 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
           scoreP2: item.scoreP2,
           gamesPlayedP2: item.gamesPlayedP2,
         }); console.log("p1")
-      } else if (item.gamesWonP1 > item.gamesWonP2 && (arrP2.length) > 1) {
+      } else if (item.gamesWonP2 > item.gamesWonP1 && (arrP2.length) + 1 > 1) {
         arr.push({
           player1: item.player2,
           gamesWonP1: item.gamesWonP2,
@@ -87,6 +87,7 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
     });
     setSave(saveState + 1)
     setInputR3(arrCom)
+    console.log("arraylength",arrP2.length);
 
   }
 
@@ -130,63 +131,65 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
   return (
     <>
       <h2>Round 2 </h2>
+      <div className="round1-cont">
       <form onSubmit={handleSubmit}>
+          {pairsListR2.map((item, index) => (
+            <Fragment key={`${item}~${index}`}>
+              <div className="form-row-rounds">
+                
+                <div className="form-group col-sm-3">
+                  <label htmlFor="player1">Player 1:{item.player1}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    className="form-control"
+                    id="player1"
+                    name="player1"
+                    value={item.scoreP1}
+                    onChange={event => handleInputChangeR2(index, event)}
+                  />
+                </div>
 
-        {pairsListR2.map((item, index) => (
-          <Fragment key={`${item}~${index}`}>
-            <div className="form-row">
-              <div className="form-group col-sm-6">
-                <label htmlFor="player1">{item.player1}</label>
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  className="form-control"
-                  id="player1"
-                  name="player1"
-                  value={item.scoreP1}
-                  onChange={event => handleInputChangeR2(index, event)}
-                />
+
+                <div className="form-group col-sm-3">
+                  <label htmlFor="player2">Player 2:{item.player2}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    className="form-control"
+                    id="player2"
+                    name="player2"
+                    value={item.scoreP2}
+                    onChange={event => handleInputChangeR2(index, event)}
+                  />
+                </div>
               </div>
-
-
-              <div className="form-group col-sm-4">
-                <label htmlFor="player2">{item.player2}</label>
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  className="form-control"
-                  id="player2"
-                  name="player2"
-                  value={item.scoreP2}
-                  onChange={event => handleInputChangeR2(index, event)}
-                />
-              </div>
-            </div>
-          </Fragment>
-        ))
-        }
-        <div className="submit-button">
-          {saveState % 2 === 0 ? <button
-            className="btn btn-primary mr-2"
-            type="submit"
-            onSubmit={handleSubmit}>
-            Next Round
+            </Fragment>
+          ))
+          }
+          <div className="submit-button">
+            {saveState % 2 === 0 ? <button
+              className="submit-play-but"
+              type="submit"
+              onSubmit={handleSubmit}>
+              Next Round
           </button> : null}
-        </div>
-        <br />
-        <pre>
-          {/* {JSON.stringify(inputFieldsR2, null, 2)}
+          </div>
+{/* <pre>
+          {JSON.stringify(inputFieldsR2, null, 2)}
           <p>p1temp</p>
           {JSON.stringify(p1Temp, null, 2)}
           <p>p2temp</p>
           {JSON.stringify(p2Temp, null, 2)}
           <p>Combined Array</p>
-          {JSON.stringify(inputR3, null, 2)} */}
-        </pre>
+          {JSON.stringify(inputR3, null, 2)}
+</pre> */}
+       
       </form>
-      <button onClick={() => { combineArrays() }}>Save</button>
+      <button class="sav-play-but" onClick={() => { combineArrays() }}>Save</button>
+      </div>
       <br />
       {submitState % 2 === 0 ? <Round3 /> : null}
 

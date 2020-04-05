@@ -52,7 +52,7 @@ const Round1 = ({ pairsList, handleFormSubmit, pairsListR2, r1Status }) => {
           scoreP2: item.scoreP2,
           gamesPlayedP2: item.gamesPlayedP2,
         }); console.log("p1")
-      } else if (item.gamesWonP1 > item.gamesWonP2 && (arrP2.length + 1) > 2) {
+      } else if (item.gamesWonP2 > item.gamesWonP1 && (arrP2.length + 1) > 2) {
         arr.push({
           player1: item.player2,
           gamesWonP1: item.gamesWonP2,
@@ -136,64 +136,64 @@ const Round1 = ({ pairsList, handleFormSubmit, pairsListR2, r1Status }) => {
   return (
     <>
       <h2>Round 1 </h2>
-      <form onSubmit={handleSubmit}>
+      <div className="round1-cont">
+        <form onSubmit={handleSubmit}>
+          {pairsList.map((item, index) => (
+            <Fragment key={`${item}~${index}`}>
+              <div className="form-row-rounds">
 
-        {pairsList.map((item, index) => (
-          <Fragment key={`${item}~${index}`}>
-            <div className="form-row">
-              <div className="form-group col-sm-6">
-                <label htmlFor="player1">{item.player1}</label>
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  className="form-control"
-                  id="player1"
-                  name="player1"
-                  value={item.scoreP1}
-                  onChange={event => handleInputChange(index, event)}
-                />
+                <div className="form-group col-sm-3">
+                  <label htmlFor="player1">Player 1:{item.player1}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    className="form-control"
+                    id="player1"
+                    name="player1"
+                    value={item.scoreP1}
+                    onChange={event => handleInputChange(index, event)}
+                  />
+                </div>
+
+
+                <div className="form-group col-sm-3">
+                  <label htmlFor="player2">Player 2:{item.player2}</label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    className="form-control"
+                    id="player2"
+                    name="player2"
+                    value={item.scoreP2}
+                    onChange={event => handleInputChange(index, event)}
+                  />
+                </div>
               </div>
-
-
-              <div className="form-group col-sm-4">
-                <label htmlFor="player2">{item.player2}</label>
-                <input
-                  type="number"
-                  min="1"
-                  max="10"
-                  className="form-control"
-                  id="player2"
-                  name="player2"
-                  value={item.scoreP2}
-                  onChange={event => handleInputChange(index, event)}
-                />
-              </div>
-            </div>
-          </Fragment>
-        ))
-        }
-        <div className="submit-button">
-          {saveState % 2 === 0 ? <button
-            className="btn btn-primary mr-2"
-            type="submit"
-            onSubmit={handleSubmit}>
-            Next Round
+            </Fragment>
+          ))
+          }
+          <div className="submit-button">
+            {saveState % 2 === 0 ? <button
+              className="submit-play-but"
+              type="submit"
+              onSubmit={handleSubmit}>
+              Next Round
           </button> : null}
-
-        </div>
-        <br />
-        <pre>
-          {/* {JSON.stringify(inputFields, null, 2)}
+          </div>
+          {/* <pre>
+          {JSON.stringify(inputFields, null, 2)}
           <p>p1temp</p>
           {JSON.stringify(p1Temp, null, 2)}
           <p>p2temp</p>
           {JSON.stringify(p2Temp, null, 2)}
           <p>Combined Array</p>
-          {JSON.stringify(inputR2, null, 2)} */}
-        </pre>
-      </form>
-      <button onClick={() => { combineArrays() }}>Save</button>
+          {JSON.stringify(inputR2, null, 2)}
+          </pre> */}
+        </form>
+        <button class="sav-play-but" onClick={() => { combineArrays() }}>Save</button>
+      </div>
       <br />
       {submitState % 2 === 0 ? <Round2 /> : null}
 
