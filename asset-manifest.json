@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/tableTennisApp_frontEnd/static/js/main.7d8dd68c.chunk.js",
-    "main.js.map": "/tableTennisApp_frontEnd/static/js/main.7d8dd68c.chunk.js.map",
+    "main.js": "/tableTennisApp_frontEnd/static/js/main.a5f3bcd7.chunk.js",
+    "main.js.map": "/tableTennisApp_frontEnd/static/js/main.a5f3bcd7.chunk.js.map",
     "runtime-main.js": "/tableTennisApp_frontEnd/static/js/runtime-main.cc0d1a48.js",
     "runtime-main.js.map": "/tableTennisApp_frontEnd/static/js/runtime-main.cc0d1a48.js.map",
-    "static/js/2.a240a8c9.chunk.js": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js",
-    "static/js/2.a240a8c9.chunk.js.map": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js.map",
+    "static/js/2.c5c5c5fe.chunk.js": "/tableTennisApp_frontEnd/static/js/2.c5c5c5fe.chunk.js",
+    "static/js/2.c5c5c5fe.chunk.js.map": "/tableTennisApp_frontEnd/static/js/2.c5c5c5fe.chunk.js.map",
     "index.html": "/tableTennisApp_frontEnd/index.html",
-    "precache-manifest.a2285e71798a94ca9921957f5faaae6a.js": "/tableTennisApp_frontEnd/precache-manifest.a2285e71798a94ca9921957f5faaae6a.js",
+    "precache-manifest.99fc9c69428ba7d410056da546545bfb.js": "/tableTennisApp_frontEnd/precache-manifest.99fc9c69428ba7d410056da546545bfb.js",
     "service-worker.js": "/tableTennisApp_frontEnd/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.a240a8c9.chunk.js.LICENSE.txt": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js.LICENSE.txt",
+    "static/js/2.c5c5c5fe.chunk.js.LICENSE.txt": "/tableTennisApp_frontEnd/static/js/2.c5c5c5fe.chunk.js.LICENSE.txt",
     "static/media/beerCup.jpg": "/tableTennisApp_frontEnd/static/media/beerCup.bee59bed.jpg",
-    "static/media/cupArrangement.jpg": "/tableTennisApp_frontEnd/static/media/cupArrangement.4e56e355.jpg"
+    "static/media/cupArrangement.jpg": "/tableTennisApp_frontEnd/static/media/cupArrangement.4e56e355.jpg",
+    "static/media/pug_on_horse.jpeg": "/tableTennisApp_frontEnd/static/media/pug_on_horse.b88fae22.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.cc0d1a48.js",
-    "static/js/2.a240a8c9.chunk.js",
+    "static/js/2.c5c5c5fe.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.7d8dd68c.chunk.js"
+    "static/js/main.a5f3bcd7.chunk.js"
   ]
 }

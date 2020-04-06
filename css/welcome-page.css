@@ -85,6 +85,18 @@
         
         }
 
+
+
+.fOf {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
         /* .enter-button {
 
 } */

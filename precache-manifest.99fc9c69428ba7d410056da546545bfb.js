@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7aecaf1727973cd0ea91fd0d06af902",
+    "revision": "139b0690130ef6c378dcf6df855932c4",
     "url": "/tableTennisApp_frontEnd/index.html"
   },
   {
-    "revision": "52a1ec9fed0bd21ca09c",
+    "revision": "be512b6063c1f9f8be1b",
     "url": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "34cffbf7dbd90c4d04d8",
-    "url": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js"
+    "revision": "7dd40fafc6e84880912b",
+    "url": "/tableTennisApp_frontEnd/static/js/2.c5c5c5fe.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js.LICENSE.txt"
+    "url": "/tableTennisApp_frontEnd/static/js/2.c5c5c5fe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "52a1ec9fed0bd21ca09c",
-    "url": "/tableTennisApp_frontEnd/static/js/main.7d8dd68c.chunk.js"
+    "revision": "be512b6063c1f9f8be1b",
+    "url": "/tableTennisApp_frontEnd/static/js/main.a5f3bcd7.chunk.js"
   },
   {
     "revision": "3437f1b2266e054a6f50",
@@ -30,5 +30,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4e56e3556d66cebcc49c450ebfef6208",
     "url": "/tableTennisApp_frontEnd/static/media/cupArrangement.4e56e355.jpg"
+  },
+  {
+    "revision": "b88fae22615bcae0f2d40f1ebe537d8f",
+    "url": "/tableTennisApp_frontEnd/static/media/pug_on_horse.b88fae22.jpeg"
   }
 ]);
