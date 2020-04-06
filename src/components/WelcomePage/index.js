@@ -1,6 +1,7 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+
+// import CupArrangement from './';
 
 
 const WelcomePage = () => {
@@ -8,10 +9,10 @@ const WelcomePage = () => {
     return (
         <div className="welcome-page">
             <figure class="welcome-image"> 
-                <img src="../../../images/beerCup.jpg"/>
+                <img src={require('./beerCup.jpg')}/>
             </figure>
             <div class="welcome-image-r">
-                <img src="../../../images/pingpongking.jpg" className="pong-king"/>
+                <img src={require('./pingpongking.jpg')} className="pong-king"/>
                 <p class="title-welcome-card">
                     You have Made it!
                 </p>
@@ -30,7 +31,7 @@ const WelcomePage = () => {
                 </Link>
             </div>
             <figure class="welcome-image"> 
-                <img src="../../../images/cupArrangement.jpg"/>
+                <img src={ require('./cupArrangement.jpg')}/>
             </figure>
         </div>
     )
