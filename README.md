@@ -2,23 +2,32 @@
 
 Prosecco Pong Tournament App
 
+## Background
+
+This App was created as part of my final challenge at DevelopMe_. The Challeneg looked at using all the skills we had learned over the 12 weeks including: WIRE-FRAMING, HTML, CSS, JS, LARAVEL, SQL, PHP, REACT, REACT REDUX and GIT.
+
+You can view the finished app by visiting here: https://ross-ferreira.github.io/tableTennisApp_frontEnd/#/
+
+
 ## Getting Started
 
 Please follow the instructions below to easily get up and running and enjoying the App. 
 
 Thanks :)
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
-* npm install 
+Requirements - NPM
+
+run git clone to clone this git repository:
+
+* git@github.com:ross-ferreira/tableTennisApp_frontEnd.git
+
+in the project directory run:
+
+* npm install to install all dependencies
+
+* npm start to run the app locally
 
 
 ## Built With
@@ -42,11 +51,14 @@ No License required
 * DevelopMe- Mark, Rachel, Adam, Oli,Pete,Jack,Flo,Nicola- Thanks for all the help and guidance
 
 
-### `npm start`
+## Further Development
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Styling
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+I would like to further develope the App to be responsive across more platforms.
+
+# API
+
+The App really orientates itself to having a working Backend for Storing Scores and Login details for users.
+I hope to connect a backend using laravel soon.
 
