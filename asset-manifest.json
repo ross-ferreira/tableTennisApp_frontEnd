@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/prosecco_pong/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/prosecco_pong/static/js/main.0bee536b.chunk.js",
-    "main.js.map": "/prosecco_pong/static/js/main.0bee536b.chunk.js.map",
-    "runtime-main.js": "/prosecco_pong/static/js/runtime-main.be969f12.js",
-    "runtime-main.js.map": "/prosecco_pong/static/js/runtime-main.be969f12.js.map",
-    "static/js/2.ff6c0c7d.chunk.js": "/prosecco_pong/static/js/2.ff6c0c7d.chunk.js",
-    "static/js/2.ff6c0c7d.chunk.js.map": "/prosecco_pong/static/js/2.ff6c0c7d.chunk.js.map",
-    "index.html": "/prosecco_pong/index.html",
-    "precache-manifest.348acc75db41ed48171493924e670863.js": "/prosecco_pong/precache-manifest.348acc75db41ed48171493924e670863.js",
-    "service-worker.js": "/prosecco_pong/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/prosecco_pong/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.ff6c0c7d.chunk.js.LICENSE.txt": "/prosecco_pong/static/js/2.ff6c0c7d.chunk.js.LICENSE.txt"
+    "main.css": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/tableTennisApp_frontEnd/static/js/main.0bee536b.chunk.js",
+    "main.js.map": "/tableTennisApp_frontEnd/static/js/main.0bee536b.chunk.js.map",
+    "runtime-main.js": "/tableTennisApp_frontEnd/static/js/runtime-main.cc0d1a48.js",
+    "runtime-main.js.map": "/tableTennisApp_frontEnd/static/js/runtime-main.cc0d1a48.js.map",
+    "static/js/2.ff6c0c7d.chunk.js": "/tableTennisApp_frontEnd/static/js/2.ff6c0c7d.chunk.js",
+    "static/js/2.ff6c0c7d.chunk.js.map": "/tableTennisApp_frontEnd/static/js/2.ff6c0c7d.chunk.js.map",
+    "index.html": "/tableTennisApp_frontEnd/index.html",
+    "precache-manifest.5bd83ca7ef9c120b305abe9b206fb79e.js": "/tableTennisApp_frontEnd/precache-manifest.5bd83ca7ef9c120b305abe9b206fb79e.js",
+    "service-worker.js": "/tableTennisApp_frontEnd/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.ff6c0c7d.chunk.js.LICENSE.txt": "/tableTennisApp_frontEnd/static/js/2.ff6c0c7d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.be969f12.js",
+    "static/js/runtime-main.cc0d1a48.js",
     "static/js/2.ff6c0c7d.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
     "static/js/main.0bee536b.chunk.js"
