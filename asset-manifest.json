@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/tableTennisApp_frontEnd/static/js/main.0bee536b.chunk.js",
-    "main.js.map": "/tableTennisApp_frontEnd/static/js/main.0bee536b.chunk.js.map",
+    "main.js": "/tableTennisApp_frontEnd/static/js/main.7d8dd68c.chunk.js",
+    "main.js.map": "/tableTennisApp_frontEnd/static/js/main.7d8dd68c.chunk.js.map",
     "runtime-main.js": "/tableTennisApp_frontEnd/static/js/runtime-main.cc0d1a48.js",
     "runtime-main.js.map": "/tableTennisApp_frontEnd/static/js/runtime-main.cc0d1a48.js.map",
-    "static/js/2.ff6c0c7d.chunk.js": "/tableTennisApp_frontEnd/static/js/2.ff6c0c7d.chunk.js",
-    "static/js/2.ff6c0c7d.chunk.js.map": "/tableTennisApp_frontEnd/static/js/2.ff6c0c7d.chunk.js.map",
+    "static/js/2.a240a8c9.chunk.js": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js",
+    "static/js/2.a240a8c9.chunk.js.map": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js.map",
     "index.html": "/tableTennisApp_frontEnd/index.html",
-    "precache-manifest.5bd83ca7ef9c120b305abe9b206fb79e.js": "/tableTennisApp_frontEnd/precache-manifest.5bd83ca7ef9c120b305abe9b206fb79e.js",
+    "precache-manifest.a2285e71798a94ca9921957f5faaae6a.js": "/tableTennisApp_frontEnd/precache-manifest.a2285e71798a94ca9921957f5faaae6a.js",
     "service-worker.js": "/tableTennisApp_frontEnd/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.ff6c0c7d.chunk.js.LICENSE.txt": "/tableTennisApp_frontEnd/static/js/2.ff6c0c7d.chunk.js.LICENSE.txt"
+    "static/js/2.a240a8c9.chunk.js.LICENSE.txt": "/tableTennisApp_frontEnd/static/js/2.a240a8c9.chunk.js.LICENSE.txt",
+    "static/media/beerCup.jpg": "/tableTennisApp_frontEnd/static/media/beerCup.bee59bed.jpg",
+    "static/media/cupArrangement.jpg": "/tableTennisApp_frontEnd/static/media/cupArrangement.4e56e355.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.cc0d1a48.js",
-    "static/js/2.ff6c0c7d.chunk.js",
+    "static/js/2.a240a8c9.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.0bee536b.chunk.js"
+    "static/js/main.7d8dd68c.chunk.js"
   ]
 }
