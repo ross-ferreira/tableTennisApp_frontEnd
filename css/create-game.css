@@ -154,8 +154,104 @@
         }
 
 
+@media screen and (max-width: 450px) {
+    .player-entry {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-left: 25px;
+        justify-content: center;
+    
+    }
+    #create-header {
+        font-size: 0.65rem;
+    }
+    .form-group-add{
+        font-size: 0.65rem;
+    }
+    .form-group-add input{
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
 
+    .add-play-but {
+        padding: 10px;
+        margin-top:6px ;
+        border: 2px solid #555555;
+        border-radius: 4px;
+    }
+    
+    .add-play-but:hover {
+            border-radius: 50px;
+            
 
+    }
+
+    .rem-play-but {
+        padding: 10px;
+        margin-top:6px ;
+        border: 2px solid #555555;
+        border-radius: 4px;
+    }
+    
+    .rem-play-but:hover {
+        border-radius: 50px;
+    }
+    .shuf-play-but {
+        padding: 10px;
+        margin:6px ;
+        border: 2px solid #555555;
+        border-radius: 4px;
+        font-size: 0.65rem;
+    }
+    
+    .shuf-play-but:hover {
+            border-radius: 50px;
+
+    }
+
+    .cup {
+        float: left;
+        border-radius: 10px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: 8px solid red;
+        border-top: 20px solid #DFE0E5;
+        width: 150px;
+        min-height: 50px;
+        margin: 2px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .fluid {
+        float: inline-end;
+        /* background-color: #F9C02C; */
+        background-size: 150px 150px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        font-size: 0.6em ;
+    
+    }
+
+    .player-list{
+        display: block;
+        flex-grow: 1;
+        margin-left: 2px;
+       
+    }
+    
+    .player-pairing {
+        display: block;
+        flex-grow: 1;
+        margin: 2px 2px 2px 2px;
+        font-size: 0.6rem;
+    }
+    
+}
 
 
 

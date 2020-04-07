@@ -40,3 +40,13 @@
     50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
     100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
   }
+
+  @media screen and (max-width: 450px) {
+    .submit-play-but {
+   
+      -webkit-border-radius: 10px;
+      border-radius: 60px;
+      padding: 5px 10px;
+      font-size: 0.6rem;
+      margin-bottom: 10px;
+  }

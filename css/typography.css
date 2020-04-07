@@ -7,6 +7,18 @@ h2, h3, h4, h5 {
     color: black;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 'bold';
+    font-weight:700;
     padding-top: 20px;
+}
+
+@media screen and (max-width: 450px) {
+    body,p,label {
+        font-size: 0.5 rem;
+    }
+    
+    h2, h3, h4, h5 {
+        padding-top: 10px;
+        font-size: 0.5rem;
+    }
+
 }

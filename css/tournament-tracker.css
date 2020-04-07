@@ -37,3 +37,46 @@
         flex-wrap: nowrap;
         align-items: center;
        } 
+
+
+@media screen and (max-width: 450px) {
+
+    #tt-title{
+        font-size: 0.8rem;
+    }
+    #r1-title{
+        font-size: 0.8rem;
+    }
+    #r2-title{
+        font-size: 0.8rem;
+    }
+    #r3-title{
+        font-size: 0.8rem;
+    }
+
+    .sav-play-but {
+        padding: 7px;
+        margin-top:6px ;
+        border: 2px solid #555555;
+        border-radius: 4px;
+        font-size: 0.65rem;
+        }
+    
+    .sav-play-but:hover {
+            border-radius: 50px;
+            }
+    .col-sm-3{
+        font-size: 0.65rem;
+    }
+
+    #player1 {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+    #player2 {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+            
+}
+
