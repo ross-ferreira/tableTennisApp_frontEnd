@@ -10,7 +10,7 @@ const Tournamnet = ({playersList,handleClick}) => {
     return (
         <>
             {/* <HeaderGame /> */}
-            <h2>Tournamnet Tracker</h2>
+            <h2 id="tt-title">Tournamnet Tracker</h2>
             
             <div className="gallery">
                 <section >

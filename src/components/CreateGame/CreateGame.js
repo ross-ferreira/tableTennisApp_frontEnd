@@ -16,7 +16,7 @@ const CreateGame = ({pairsList,player1List,player2List,count}) => {
     return (
         <>
         <div>
-        <h2 contenteditable spellcheck="false">Create New Tournamnet</h2>
+        <h2 contenteditable spellcheck="false" id="create-header">Create New Tournamnet</h2>
         </div>
             <div className="player-entry">
                 <div class="player-form">

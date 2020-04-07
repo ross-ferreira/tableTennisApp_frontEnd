@@ -1,7 +1,5 @@
 /* Positioning */
 .main-header {
-	background: rgb(229,0,21);
-	padding: 10px;
 	display:flex;
 	flex-direction: row;
 	align-items: center;
@@ -18,7 +16,6 @@
 
 .tvLabel{
 	float: left;
-	
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,6 +28,8 @@
 	background: rgb(229,0,21);
 	padding: 30px 10px 40px 10px;
 }
+
+
 .tvLabel{
 	width: 35vw;
 	height: 30vh;
@@ -82,24 +81,6 @@
 		}
 		
 
-/* .navButton {
-	display:inline-block;
-	padding: 3.5% 0.5% 0.25% 0.25%;
-	width: 13vw;
-	height: 10vh;
-	background-image: url(" http://api.thumbr.it/whitenoise-361x370.png?background=#ECECECff&noise=626262&density=28&opacity=7");
-	border: 5px inset orange;
-	text-align: center;
-	vertical-align: sub;
-    color: #555555;
-	font-family:'Graduate', cursive;
-	font-weight:bold;
-	font-size: 1.15vw;
-	margin: 25px;
-	border-radius: 50% / 17.50%;
-	transform: skew(0deg, -6deg);
-} */
-
 .footer-text{
 	color: #555555;
 	text-align: center;
@@ -107,5 +88,61 @@
 	padding: 40px;
 }
 
+@media screen and (max-width: 450px) {
+	.main-header {
+		width: 100%;
+	  	display:flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+    }
+	.main-header {
+		padding: 10px 0px 20px 0px;
+	}
+	.tvLabel{
+		width: 35vw;
+		height: auto;
+		padding:5%;
+		margin: 2px;
+		border: 3px inset orange;
+		box-shadow: none;
+		border-radius: 50% / 10%;
+		transform: skew(0deg, -6deg);
+	}
+	.container-tv{
+		display: absolute;
+		position: relative;
+	}
 
+	.tv-label-heading1 {
+		font-size: 6.5vw;
+		padding: 2.5% 0% 2% 0%;
 	
+	}
+	.nav-container{
+		margin-top: 2%;
+	}
+	.nav{
+		display:flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+
+	}
+
+	.navButton{
+		padding: 2px;
+		min-width: 50px;
+		margin:5% ;
+		border: 2px solid #555555;
+		border-radius: 2px;
+		display: block;
+		font-size: 0.2rem;
+
+		}
+	.footer-text{
+		padding: 20px;
+		font-size: 0.8rem;
+		}
+}

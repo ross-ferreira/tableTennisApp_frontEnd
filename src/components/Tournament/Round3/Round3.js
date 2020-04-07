@@ -83,13 +83,13 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
 
   return (
     <>
-      <h2>Round 3 </h2>
+      <h2 id="r3-title">Round 3 </h2>
       <form onSubmit={handleSubmit}>
         <div className="round1-cont">
           {pairsListR3.map((item, index) => (
             <Fragment key={`${item}~${index}`}>
               <div className="form-row-rounds">
-                <div className="form-group col-sm-6">
+                <div className="form-group col-sm-3">
                   <label htmlFor="player1">Player 1:{item.player1}</label>
                   <input
                     type="number"
@@ -104,7 +104,7 @@ const Round3 = ({ handleFormSubmitR3, r1Status, pairsListR3, }) => {
                 </div>
 
 
-                <div className="form-group col-sm-4">
+                <div className="form-group col-sm-3">
                   <label htmlFor="player2">Player 2:{item.player2}</label>
                   <input
                     type="number"

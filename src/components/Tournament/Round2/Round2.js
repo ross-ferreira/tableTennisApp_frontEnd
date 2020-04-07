@@ -130,7 +130,7 @@ const Round2 = ({ handleFormSubmitR2, pairsListR3, r1Status, pairsListR2 }) => {
 
   return (
     <>
-      <h2>Round 2 </h2>
+      <h2 id="r2-title">Round 2 </h2>
       <div className="round1-cont">
       <form onSubmit={handleSubmit}>
           {pairsListR2.map((item, index) => (
