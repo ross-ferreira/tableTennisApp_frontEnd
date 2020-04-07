@@ -47,7 +47,7 @@ const PlayerForm = ({
                 <div class="form-group-add">
                     <label for="player1name">Player Name (Enter 8 Players)</label>
                     <input onChange={handleInputP1} value={inputValueP1} class="form-control" id="player1name" placeholder="Enter Name"></input>
-                    {maxPlayers?<p>Just Players {noPlayersNeed } Remaining</p>:<p>Good Job Buddy!!</p>}
+                    {maxPlayers?<p>Just {noPlayersNeed } Players Remaining</p>:<p>Good Job Buddy!!</p>}
                 </div>
                 <div class="add-play-div" >
                     <button class="add-play-but" type="submit" onClick={shuffleState? handleShuffleNames:null} > + </button>

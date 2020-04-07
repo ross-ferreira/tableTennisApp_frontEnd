@@ -93,6 +93,7 @@ class Rules extends Component {
 
                     <h3 id="rules-h4">A Brief History Lesson : Who Invented Prosecco Pong?</h3>
                     <p>Is believed to have originated in the 1950s within the fraternities of Dartmouth College. Back then, their version was more like a traditional game of Ping Pong because they used paddles and a net. Sometime in the 1980s in the United States, the game change to no paddles or net and the name Prosecco Pong was adopted.</p>
+                    <img id="alignnone" src="https://media.giphy.com/media/TgFv7gGhIy1Ne/giphy.gif"   />
                     <hr />
                 </div>
                 </div>

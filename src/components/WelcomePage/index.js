@@ -12,7 +12,7 @@ const WelcomePage = () => {
             </figure>
             <div class="welcome-image-r">
                 <img src={require('./pingpongking.jpg')} className="pong-king"/>
-                <p class="title-welcome-card">
+                <p id="title-welcome-card">
                     You have Made it!
                 </p>
 
