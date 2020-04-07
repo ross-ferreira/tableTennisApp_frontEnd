@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1511ad7057a68054d9cb373c62cca164",
+    "revision": "f3da820968cf7d8b75ad0bf81f0d741c",
     "url": "/tableTennisApp_frontEnd/index.html"
   },
   {
-    "revision": "ca3960cd8999b7a7af55",
+    "revision": "3d4c02af7ef4eb13e0ad",
     "url": "/tableTennisApp_frontEnd/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tableTennisApp_frontEnd/static/js/2.c5c5c5fe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ca3960cd8999b7a7af55",
-    "url": "/tableTennisApp_frontEnd/static/js/main.d0a57e44.chunk.js"
+    "revision": "3d4c02af7ef4eb13e0ad",
+    "url": "/tableTennisApp_frontEnd/static/js/main.965d555d.chunk.js"
   },
   {
     "revision": "3437f1b2266e054a6f50",
